@@ -1,0 +1,32 @@
+{
+  "name": "behance",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "behance-api": "^1.1.4",
+    "bootstrap": "^3.3.7",
+    "install": "^0.10.1",
+    "jquery": "^3.2.1",
+    "npm": "^5.4.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmagallon/behance.git"
+  },
+  "keywords": [
+    "behance"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmagallon/behance/issues"
+  },
+  "homepage": "https://github.com/cmagallon/behance#readme"
+}
