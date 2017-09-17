@@ -1,9 +1,56 @@
 
 body{
-	font-family: sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	background-color: black;
+	margin: 0 auto;
+	padding: 20px;
+
 }
 
-html{
-  font-family: Helvetica;
+h1{
+	color: white;
 }
 
+#container{
+	font-family: 'Montserrat', sans-serif;
+	width: 800px;
+	height:800px;
+	background-color: #4771C9;
+	margin: 50px;
+	border-radius: 2px;
+	display: flex;
+
+}
+
+#header{
+	background-color: #3E62B0;
+	width: 800px;
+	height: 150px;
+	border-radius: 2px, 2px, 2px, 2px;
+
+}
+
+#profileImg{
+	background-color: violet;
+	width: 150px;
+	height: 150px;
+	
+}
+
+.likeview{
+	border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    border-radius: 5px;
+	height: 120px;
+	width: 70px;
+	float: right;
+	margin: 5px;
+	
+}
+
+.namePart{
+	background-color: yellow;
+	width: 150px;
+	height: 120px;
+}
