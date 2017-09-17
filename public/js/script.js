@@ -16,3 +16,22 @@ $.ajax({
 
 
 	});
+
+
+	$.ajax({
+
+			url: "http://www.behance.net/v2/users/designerpreis/appreciations?client_id="+ accessToken,
+			dataType: "jsonp",
+			success:function(dataFromBehance){
+				console.log(dataFromBehance);
+
+
+			},
+
+			error:function(){
+				console.log("can't connect to Behance api");
+			}
+
+
+
+		});
