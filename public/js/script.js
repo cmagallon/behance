@@ -28,6 +28,16 @@ function getData(){
 		dataType: "jsonp",
 		success:function(dataFromBehance){
 			console.log(dataFromBehance);
+      $("#nameReal").append("<p>" +dataFromBehance.creatives_to_follow[2].display_name + "</p>");
+      $("#trialImage").append("<p><img src='" +dataFromBehance.creatives_to_follow[1].images[138] + "'></p>");
+
+
+
+      for (var i = 0; i < dataFromBehance.creatives_to_follow.length; i++) {
+                console.log(dataFromBehance.creatives_to_follow[i])
+                
+                
+            }
 
 
 		},
