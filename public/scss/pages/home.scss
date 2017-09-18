@@ -1,4 +1,21 @@
-h1{
-	color: $color02;
-	font-family: 'Montserrat', sans-serif;
+.home{
+	width: 100vw;
+    height: 600px;
+	.home-text{
+		display: flex;
+    	justify-content: center;
+		.home-icon{
+			font-size: 300px;
+			opacity: 0.3;
+			display: flex;
+    		justify-content: center;
+    		margin-top: 50px;
+		}
+		.home-description{
+			margin-top: -150px;
+		    font-weight: 100;
+		    text-transform: uppercase;
+		    font-size: 40px;
+		}
+	}
 }
