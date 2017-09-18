@@ -114,7 +114,7 @@ h5{
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
@@ -128,15 +128,17 @@ h5{
 
 /* The Close Button */
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
+    color: #ffffff;
+    /*float: right;*/
+    font-size: 50px;
     font-weight: bold;
+    margin: 20px;
+    margin-top: 50px;
 }
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: whtie;
     text-decoration: none;
     cursor: pointer;
 }
