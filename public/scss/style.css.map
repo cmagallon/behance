@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAQ,6EAAqE;AACrE,qFAA6E;ACDrF,EAAE;EACD,KAAK,ECAI,OAAO;EDChB,WAAW,EAAE,wBAAwB",
+"sources": ["base/fonts.scss","pages/home.scss","base/colors.scss"],
+"names": [],
+"file": "style.css"
+}
