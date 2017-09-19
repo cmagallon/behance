@@ -13,6 +13,7 @@ var accessToken;
 	success: function(data){
        accessToken = data.accessToken;
        getData();
+       getUserData();
         
 
     },
@@ -24,20 +25,25 @@ var accessToken;
 
 function getData(){	
 	$.ajax({
-		url: "https://api.behance.net/v2/creativestofollow?client_id="+accessToken,
+		// url: "https://api.behance.net/v2/creativestofollow?client_id="+accessToken,
+    url: "https://api.behance.net/v2/users/matiascorea/projects?client_id="+accessToken,
 		dataType: "jsonp",
 		success:function(dataFromBehance){
-			console.log(dataFromBehance);
-      $("#nameReal").append("<p>" +dataFromBehance.creatives_to_follow[2].display_name + "</p>");
-      $("#trialImage").append("<p><img src='" +dataFromBehance.creatives_to_follow[1].images[138] + "'></p>");
+
+			console.log(dataFromBehance.projects[0]);
+      // $("#nameReal").append("<p>" +dataFromBehance.creatives_to_follow[2].display_name + "</p>");
+      // $("#trialImage").append("<p><img src='" +dataFromBehance.creatives_to_follow[1].images[100] + "'></p>");
+
+      $("#proName").append("<p>" +dataFromBehance.projects[0].name + "</p>");
+      $("#img1").append("<p><img src='" +dataFromBehance.projects[0].covers[115] + "'></p>");
 
 
 
-      for (var i = 0; i < dataFromBehance.creatives_to_follow.length; i++) {
-                console.log(dataFromBehance.creatives_to_follow[i])
+      // for (var i = 0; i < dataFromBehance.projects.length; i++) {
+      //           console.log(dataFromBehance.projects[0])
                 
                 
-            }
+      //       }
 
 
 		},
@@ -46,9 +52,40 @@ function getData(){
 			console.log("can't connect to Behance api");
 		}
 
-
-
 	});
+
+}
+
+function getUserData(){ 
+  $.ajax({
+    // url: "https://api.behance.net/v2/creativestofollow?client_id="+accessToken,
+    url: "https://api.behance.net/v2/users/matiascorea?client_id="+accessToken,
+    dataType: "jsonp",
+    success:function(dataFromBehance){
+
+      console.log(dataFromBehance.user);
+      // $("#nameReal").append("<p>" +dataFromBehance.creatives_to_follow[2].display_name + "</p>");
+      // $("#trialImage").append("<p><img src='" +dataFromBehance.creatives_to_follow[1].images[100] + "'></p>");
+
+      // $("#proName").append("<p>" +dataFromBehance.projects[0].name + "</p>");
+      // $("#img1").append("<p><img src='" +dataFromBehance.projects[0].covers[115] + "'></p>");
+
+
+
+      // for (var i = 0; i < dataFromBehance.projects.length; i++) {
+      //           console.log(dataFromBehance.projects[0])
+                
+                
+      //       }
+
+
+    },
+
+    error:function(){
+      console.log("can't connect to Behance api");
+    }
+
+  });
 
 }
 
