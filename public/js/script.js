@@ -20,10 +20,11 @@ $.ajax({
 
 	$.ajax({
 
-			url: "http://www.behance.net/v2/users/designerpreis/appreciations?client_id="+ accessToken,
+			url: "http://www.behance.net/v2/users/EstudioPum/projects?client_id="+ accessToken,
 			dataType: "jsonp",
 			success:function(dataFromBehance){
 				console.log(dataFromBehance);
+				console.log(dataFromBehance.projects[1].covers.original);
 
 
 			},
