@@ -1,7 +1,137 @@
 @import url("http://fontawesome.io/assets/font-awesome/css/font-awesome.css");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500");
-h1 {
-  color: #4771C9;
-  font-family: 'Montserrat', sans-serif; }
+@import url("https://fonts.googleapis.com/css?family=Droid+Sans");
+html, body {
+  font-family: 'Montserrat', sans-serif;
+  color: #FFFFFF;
+  background-color: #4771C9;
+  margin: 0;
+  padding: 0; }
+
+.header {
+  background-color: #3E62B0;
+  font-family: 'Montserrat', sans-serif;
+  color: #474747;
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  height: 100px; }
+  .header .header-nav {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; }
+    .header .header-nav .logo {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-family: 'Droid Sans', sans-serif;
+      text-transform: uppercase;
+      font-size: 30px; }
+  .header .header-menu {
+    width: 600px;
+    display: flex;
+    align-items: center; }
+    .header .header-menu ul {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly; }
+      .header .header-menu ul li {
+        list-style-type: none; }
+        .header .header-menu ul li a {
+          text-decoration: none;
+          color: #FFFFFF;
+          text-transform: uppercase;
+          font-weight: 100; }
+
+.home {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; }
+  .home .home-text {
+    width: 80%; }
+    .home .home-text .home-icon {
+      font-size: 400px;
+      opacity: 0.1;
+      display: flex;
+      justify-content: center;
+      margin-top: 50px; }
+    .home .home-text .home-description {
+      margin-top: -230px;
+      font-weight: 100;
+      font-size: 40px;
+      display: flex;
+      justify-content: center;
+      text-align: center; }
+    .home .home-text .home-team_tittle {
+      font-weight: 100;
+      font-size: 80px;
+      margin: 300px 0 0 0;
+      display: flex;
+      justify-content: center; }
+  .home .profile {
+    width: 80%;
+    height: 300px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .home .profile .profile-pic {
+      background-color: #FFFFFF;
+      border: 0.1px solid #474747;
+      width: 300px;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 2px; }
+      .home .profile .profile-pic img {
+        width: 70%;
+        height: auto; }
+      .home .profile .profile-pic .img-circle {
+        border-radius: 50%; }
+      .home .profile .profile-pic .profile-name {
+        color: #000000;
+        font-weight: 200;
+        font-size: 25px;
+        margin: 5px 0 0 0; }
+      .home .profile .profile-pic .profile-desc {
+        color: #000000;
+        font-weight: 100;
+        font-size: 15px;
+        margin: 0; }
+    .home .profile .profile-project {
+      background-color: #FFFFFF;
+      border: 0.1px solid #474747;
+      border-radius: 2px;
+      width: 1010px;
+      height: 300px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center; }
+      .home .profile .profile-project .profile-project_single {
+        background-color: #FFFFFF;
+        border: 1px solid #474747;
+        border-radius: 2px;
+        width: 260px;
+        height: 260px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center; }
+        .home .profile .profile-project .profile-project_single .project-img {
+          width: 100%;
+          height: auto; }
+        .home .profile .profile-project .profile-project_single .project-txt {
+          color: #000000;
+          font-weight: 100;
+          font-size: 18px; }
+      .home .profile .profile-project .arrows {
+        color: #000000;
+        font-size: 30px; }
 
 /*# sourceMappingURL=style.css.map */
