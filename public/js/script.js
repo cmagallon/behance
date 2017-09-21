@@ -17,13 +17,18 @@ $.ajax({
 
 	});
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> d0308a03f34999c7e68292d219f27103b4663416
 
 	$.ajax({
 
-			url: "http://www.behance.net/v2/users/designerpreis/appreciations?client_id="+ accessToken,
+			url: "http://www.behance.net/v2/users/EstudioPum/projects?client_id="+ accessToken,
 			dataType: "jsonp",
 			success:function(dataFromBehance){
 				console.log(dataFromBehance);
+				console.log(dataFromBehance.projects[1].covers.original);
 
 
 			},
@@ -35,5 +40,8 @@ $.ajax({
 
 
 		});
+<<<<<<< HEAD
 =======
 >>>>>>> master
+=======
+>>>>>>> d0308a03f34999c7e68292d219f27103b4663416
