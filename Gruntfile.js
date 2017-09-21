@@ -9,14 +9,12 @@ module.exports = function(grunt) {
 			}
 		},
 		watch: {
-
-			sass:{
-				files: ['public/scss/pages/profile.scss'],
-				files: ['public/scss/style.scss', 'public/scss/base/*.scss', 'public/scss/components/*.scss', 'public/scss/pages/*.scss'],
-
+			css: {
+				files: 'scss/style.scss',
+				tasks: ['sass']
+			}
 		}
 	});
-
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.registerTask('default',['watch']);

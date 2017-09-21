@@ -183,46 +183,16 @@ html, body {
         color: #000000;
         font-size: 30px; }
 
-<<<<<<< HEAD
-body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif; }
-
-#profile-container {
-  height: 100% auto;
-  width: 100% auto; }
-
-.top-bar {
-  background-color: #3E62B0;
-  width: 100%;
-  height: 120px;
-=======
 .top-bar {
   background-color: #3E62B0;
   width: 100%;
   height: 150px;
->>>>>>> master
   border-top-right-radius: 2px;
   border-top-left-radius: 2px;
   display: flex;
   justify-content: space-between;
   color: #FFFFFF; }
 
-<<<<<<< HEAD
-.profile-pic {
-  display: flex;
-  flex-direction: row; }
-  .profile-pic img {
-    width: 90px;
-    height: 90px;
-    margin: auto;
-    margin-left: 20px;
-margin-top: 14px;
-border-radius: 200px;
-   }
-
-.profile-text {
-=======
 .profile2-pic {
   display: flex;
   flex-direction: row;
@@ -235,27 +205,18 @@ border-radius: 200px;
     border-radius: 50%; }
 
 .profile2-text {
->>>>>>> master
   color: white;
   justify-content: flex-start;
   align-self: center;
   float: left; }
-<<<<<<< HEAD
-  .profile-text h2 {
-=======
   .profile2-text h2 {
->>>>>>> master
     padding-left: 10px;
     display: inline;
     text-align: center;
     vertical-align: top;
     color: white;
     font-weight: 400; }
-<<<<<<< HEAD
-  .profile-text h3 {
-=======
   .profile2-text h3 {
->>>>>>> master
     text-align: right;
     margin: auto;
     vertical-align: top;
@@ -263,12 +224,8 @@ border-radius: 200px;
 
 .views-likes {
   display: flex;
-<<<<<<< HEAD
-  flex-direction: row; }
-=======
   flex-direction: row;
   align-items: center; }
->>>>>>> master
 
 .views, .likes {
   height: 100px;
@@ -292,10 +249,6 @@ h4 {
 
 .content {
   width: 100%;
-<<<<<<< HEAD
-  height: 700px;
-=======
->>>>>>> master
   background-color: #4771C9; }
 
 .content-text {
@@ -305,12 +258,7 @@ h4 {
   .content-text h2 {
     padding-left: 20px;
     margin: 0;
-<<<<<<< HEAD
-    font-weight: 200;
-    /*     font-size: 2.5em; */ }
-=======
     font-weight: 200; }
->>>>>>> master
   .content-text p {
     padding-left: 20px;
     font-weight: 100; }

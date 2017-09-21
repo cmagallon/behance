@@ -1,49 +1,13 @@
-<<<<<<< HEAD
-body {
-    margin:0;
-    font-family: 'Montserrat', sans-serif;
-
-}
-
-#profile-container{
-    height: 100%auto;
-    width: 100%auto;
-
-}
-
-.top-bar{
-    background-color: $color03;
-    width: 100%;
-    height: 120px;
-=======
 .top-bar{
     background-color: $color03;
     width: 100%;
     height: 150px;
->>>>>>> master
     border-top-right-radius: 2px;
     border-top-left-radius: 2px;
     display: flex;
     justify-content: space-between;
     color: $color01;
 }
-<<<<<<< HEAD
-.profile-pic{
-    display: flex;
-    flex-direction: row;
-    img{
-        width: 90px;
-        height: 90px;
-        margin:auto;
-        padding-left: 20px;
-    }
-
-}
-
-
-
-.profile-text{
-=======
 
 .profile2-pic{
     display: flex;
@@ -59,7 +23,6 @@ body {
 }
 
 .profile2-text{
->>>>>>> master
     color: white;
     justify-content: flex-start;
     align-self: center;
@@ -71,35 +34,21 @@ body {
         vertical-align: top;
         color: white;
         font-weight: 400;
-<<<<<<< HEAD
-
-    }
-    h3{
-            text-align: right;
-            margin: auto;
-            vertical-align: top;
-            font-weight: 200;
-=======
     }
     h3{
         text-align: right;
         margin: auto;
         vertical-align: top;
         font-weight: 200;
->>>>>>> master
     }
 }
 
 .views-likes{
     display: flex;
     flex-direction: row;
-<<<<<<< HEAD
-}
-=======
     align-items: center;
 }
 
->>>>>>> master
 .views, .likes{
     height: 100px;
     width: 66px;
@@ -123,16 +72,9 @@ h4{
     font-weight: 100;
 }
 
-<<<<<<< HEAD
-
-.content{
-    width: 100%;
-    height: 700px;
-=======
 .content{
     width: 100%;
     // height: 700px;
->>>>>>> master
     background-color: $color02;
 }
 
@@ -144,17 +86,9 @@ h4{
         padding-left: 20px;
         margin: 0;
         font-weight: 200;
-<<<<<<< HEAD
-    /*     font-size: 2.5em; */
-=======
->>>>>>> master
     }
     p{
         padding-left: 20px;
         font-weight: 100;
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> master
