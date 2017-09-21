@@ -83,7 +83,7 @@ html, body {
     .header .header-menu ul {
       width: 100%;
       display: flex;
-      justify-content: space-evenly; }
+      justify-content: space-around; }
       .header .header-menu ul li {
         list-style-type: none; }
         .header .header-menu ul li a {
@@ -139,7 +139,8 @@ html, body {
       border-radius: 2px; }
       .home .profile .profile-pic img {
         width: 70%;
-        height: auto; }
+        height: auto;
+        margin-top: 10px; }
       .home .profile .profile-pic .img-circle {
         border-radius: 50%; }
       .home .profile .profile-pic .profile-name {
