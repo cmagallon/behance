@@ -1,4 +1,107 @@
-h1{
-	color: $color02;
-	font-family: 'Montserrat', sans-serif;
+.home{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+	.home-text{
+		width: 80%;
+		.home-icon{
+			font-size: 400px;
+			opacity: 0.1;
+			display: flex;
+    		justify-content: center;
+    		margin-top: 50px;
+		}
+		.home-description{
+			margin-top: -230px;
+		    font-weight: 100;
+		    // text-transform: uppercase;
+		    font-size: 40px;
+		    display: flex;
+    		justify-content: center;
+    		text-align: center;
+		}
+		.home-team_tittle{
+			font-weight: 100;
+    		font-size: 80px;
+    		margin: 300px 0 0 0;
+    		display: flex;
+    		justify-content: center;
+		}
+	}
+	.profile{
+    	width: 80%;
+	    height: 300px;
+	    margin-bottom: 50px;
+    	margin-top: 30px;
+    	display: flex;
+    	flex-direction: row;
+    	justify-content: space-between;
+    	.profile-pic{
+    		background-color: $color01;
+    		border: 0.1px solid $color04;
+    		width: 300px;
+    		height: 300px;
+		    display: flex;
+		    flex-direction: column;
+		    align-items: center;
+		    justify-content: center;
+		    border-radius: 2px;
+    		img{
+    			width: 70%;
+    			height: auto;
+    		}
+    		.img-circle{
+    			border-radius: 50%;
+    		}
+    		.profile-name{
+    			color: $color05;
+    			font-weight: 200;
+			    font-size: 25px;
+			    margin: 5px 0 0 0 ;
+    		}
+    		.profile-desc{
+    			color: $color05;
+    			font-weight: 100;
+    			font-size: 15px;
+    			margin: 0;
+    		}
+    	}
+    	.profile-project{
+    		background-color: $color01;
+    		border: 0.1px solid $color04;
+    		border-radius: 2px;
+    		width: 1010px;
+    		height: 300px;
+    		display: flex;
+		    flex-direction: row;
+		    justify-content: space-around;
+		    align-items: center;
+    		.profile-project_single{
+    			background-color: $color01;
+    			border: 1px solid $color04;
+    			border-radius: 2px;
+			    width: 260px;
+			    height: 260px;
+			    display: flex;
+			    flex-direction: column;
+			    justify-content: flex-start;
+			    align-items: center;
+			    .project-img{
+			    	width: 100%;
+			    	height: auto;
+			    }
+			    .project-txt{
+			    	color: $color05;
+			    	font-weight: 100;
+	    			font-size: 18px;
+			    }
+    		}
+    		.arrows{
+    			color: $color05;
+    			font-size: 30px;
+    		}
+    	}
+	}
 }
