@@ -29,7 +29,10 @@ body {
     width: 90px;
     height: 90px;
     margin: auto;
-    padding-left: 20px; }
+    margin-left: 20px;
+margin-top: 14px;
+border-radius: 200px;
+   }
 
 .profile-text {
   color: white;
