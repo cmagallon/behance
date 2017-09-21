@@ -25,7 +25,11 @@ var accessToken = "uLqA16H6sQWfTUFyQij6fsxlkDUSnckN";
 				console.log(dataFromBehance);
 				$("#user-name").append(dataFromBehance.user.display_name);
 				$("#display-pic").append("<img  src='"+dataFromBehance.user.images[230]+"'>");
-				// $("#user_name").append(dataFromBehance.user.display_name);
+				$("#feilds").append(dataFromBehance.user.fields[2]);
+				$("#views").append(dataFromBehance.user.stats.views);
+				$("#likes").append(dataFromBehance.user.stats.appreciations);
+				$("#occupation").append(dataFromBehance.user.occupation);
+				$("#location").append(dataFromBehance.user.location);
 
 			},
 
