@@ -35,7 +35,10 @@ function getData(){
       // $("#trialImage").append("<p><img src='" +dataFromBehance.creatives_to_follow[1].images[100] + "'></p>");
 
       $("#proName").append("<p>" +dataFromBehance.projects[0].name + "</p>");
-      $("#img1").append("<p><img src='" +dataFromBehance.projects[0].covers[115] + "'></p>");
+      $("#img1").append("<p><img src='" +dataFromBehance.projects[0].covers["original"] + "'></p>");
+      $("#thumbnail").append("<p><img src='" +dataFromBehance.projects[0].covers[115] + "'></p>");
+      $("#likes").append("<p>" +dataFromBehance.projects[0].stats["appreciations"]+ "</p>");
+      $("#views").append("<p>" +dataFromBehance.projects[0].stats["views"]+ "</p>");
 
 
 
@@ -58,25 +61,16 @@ function getData(){
 
 function getUserData(){ 
   $.ajax({
-    // url: "https://api.behance.net/v2/creativestofollow?client_id="+accessToken,
+    
     url: "https://api.behance.net/v2/users/matiascorea?client_id="+accessToken,
     dataType: "jsonp",
     success:function(dataFromBehance){
 
-      console.log(dataFromBehance.user);
-      // $("#nameReal").append("<p>" +dataFromBehance.creatives_to_follow[2].display_name + "</p>");
-      // $("#trialImage").append("<p><img src='" +dataFromBehance.creatives_to_follow[1].images[100] + "'></p>");
+      console.log(dataFromBehance.user["images"]);
 
-      // $("#proName").append("<p>" +dataFromBehance.projects[0].name + "</p>");
-      // $("#img1").append("<p><img src='" +dataFromBehance.projects[0].covers[115] + "'></p>");
-
-
-
-      // for (var i = 0; i < dataFromBehance.projects.length; i++) {
-      //           console.log(dataFromBehance.projects[0])
-                
-                
-      //       }
+      $("#profileImg").append("<p><img src='" +dataFromBehance.user["images"][138] + "'></p>");
+      
+    
 
 
     },
