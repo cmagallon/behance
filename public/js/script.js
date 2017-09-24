@@ -22,13 +22,13 @@ $.ajax({
 	dataType: "jsonp",
 	success:function(dataFromBehance){
 		console.log(dataFromBehance);
-		$("#user-name").append(dataFromBehance.user.display_name);
-		$("#display-pic").append("<img  src='"+dataFromBehance.user.images[230]+"'>");
-		$("#feilds").append(dataFromBehance.user.fields[2]);
-		$("#views").append(dataFromBehance.user.stats.views);
-		$("#likes").append(dataFromBehance.user.stats.appreciations);
-		$("#occupation").append(dataFromBehance.user.occupation);
-		$("#location").append(dataFromBehance.user.location);
+		$(".user-name").append(dataFromBehance.user.display_name);
+		$(".display-pic").append("<img  src='"+dataFromBehance.user.images[230]+"'>");
+		$(".feilds").append(dataFromBehance.user.fields[2]);
+		$(".views-number").append(dataFromBehance.user.stats.views);
+		$(".likes-number").append(dataFromBehance.user.stats.appreciations);
+		$(".occupation").append(dataFromBehance.user.occupation);
+		$(".location").append(dataFromBehance.user.location);
 
 
 			},

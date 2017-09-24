@@ -220,7 +220,8 @@ html, body {
     text-align: right;
     margin: auto;
     vertical-align: top;
-    font-weight: 200; }
+    font-weight: 200;
+    padding-left: 10px; }
 
 .views-likes {
   display: flex;
@@ -262,5 +263,13 @@ h4 {
   .content-text p {
     padding-left: 20px;
     font-weight: 100; }
+
+.display-pic img {
+  width: 90px;
+  height: 90px;
+  margin: auto;
+  margin-left: 20px;
+  margin-top: 14px;
+  border-radius: 200px; }
 
 /*# sourceMappingURL=style.css.map */
