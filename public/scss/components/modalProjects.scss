@@ -38,3 +38,29 @@
     cursor: pointer;
 }
 
+#img1{
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 3px;
+}
+
+#img1 img{
+    width: 100%;
+}
+
+.profileimage{
+    float: left;
+    margin-left: 20px;
+
+}
+
+.profileimage img{
+    border-radius: 50%;
+
+}
+
+.project-text{
+    width: 700px;
+    margin-left: 180px;
+    margin-top: 20px;
+}

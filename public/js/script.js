@@ -5,8 +5,7 @@ $.ajax({
 		dataType: "jsonp",
 		success:function(dataFromBehance){
 			console.log(dataFromBehance);
-
-
+            
 		},
 
 		error:function(){
@@ -46,7 +45,9 @@ window.onclick = function(event) {
     }
 }
 
-// Code for project popup
+
+
+// Code for project3 popup
 
 // Get the modal
 var modalProject = document.getElementById("myModalProject");
@@ -73,4 +74,3 @@ window.onclick = function(event) {
         modalProject.style.display = "none";
     }
 }
-
