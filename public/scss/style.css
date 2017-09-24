@@ -272,4 +272,12 @@ h4 {
   margin-top: 14px;
   border-radius: 200px; }
 
+#chart {
+  width: 50%; }
+
+.test {
+  height: 100px;
+  width: 200px;
+  background-color: blue; }
+
 /*# sourceMappingURL=style.css.map */

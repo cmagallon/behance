@@ -3,6 +3,7 @@
 <head>
 	<title>Behance Project</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="scss/style.css">
 </head>
 <body class="main">
@@ -200,17 +201,17 @@
 
 <!-- Code from Chris -->
 		<!-- The modal profile content-->
-		<div class="modal-content">
-			<div id="profile-container">
-				<div class="top-bar">
-		<div class="profile2-pic">
-			<!-- <img src="assets/profile-circle.png" alt="user icon"> -->
-			<div class="display-pic"></div>
-			<div class="profile2-text">
-				<h2 class="user-name"></h2>
-				<h3 class="feilds"></h3>
+<div class="modal-content">
+	<div id="profile-container">
+		<div class="top-bar">
+			<div class="profile2-pic">
+				<!-- <img src="assets/profile-circle.png" alt="user icon"> -->
+				<div class="display-pic"></div>
+				<div class="profile2-text">
+					<h2 class="user-name"></h2>
+					<h3 class="feilds"></h3>
+				</div>
 			</div>
-		</div>
 
 		<div class="views-likes">
 			<div class="views">
@@ -229,24 +230,29 @@
 			</div>
 		</div>
 	</div>
-	<div class="Latest">
-	</div>
-	<div class="content">
-		<div class="content-text">
-			<h2>Occupation</h2>
-			<p class="occupation"></p>
-			<h2>Location</h2>
-			<p class="location"></p>
-			<h2>Clients</h2>
-			<p>ANZ</p>
-			<p>Trello</p>
-			<p>Yoobee</p>
-			<h2>Contact</h2>
-			<p>stevanRodic@gmail.com</p>
+		<div class="Latest">
 		</div>
-	</div>
+		<div class="content">
+			<div class="content-text">
+				<h2>Occupation</h2>
+				<p class="occupation"></p>
+				<h2>Location</h2>
+				<p class="location"></p>
+				<h2>Clients</h2>
+				<p>ANZ</p>
+				<p>Trello</p>
+				<p>Yoobee</p>
+				<h2>Contact</h2>
+				<p>stevanRodic@gmail.com</p>
 			</div>
 		</div>
+	</div>
+	<div class="test">
+
+	</div>
+	<div id="chart"></div>
+
+</div>
 		<!-- Close modal profile content-->
 
 
@@ -256,6 +262,8 @@
 
 
 	<script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
+	<!-- Google Charts -->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 	<script type="text/javascript" src="js/profile.js"></script>
 
