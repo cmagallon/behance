@@ -1,19 +1,12 @@
-var accessToken = "kPjbO9ychhcXHOcnuBdYaUtWryHz5a5G";
+var accessToken = "k881c8hHjZvoOUo53VMkZU8crZAAGMel";
 
 $.ajax({
 	url: "https://api.behance.net/v2/creativestofollow?client_id=" + accessToken,
 	dataType: "jsonp",
 	success:function(dataFromBehance){
-		var creatives = dataFromBehance.creatives_to_follow;
-		for (var i = 0; i < creatives.length; i++) {
-			console.log(i);
-			$("#modalProfile").append("<div class='profile-card'>"+
-				"<img class='img-circle' src='"+creatives[i].images[276]+"' />"+
-				"<div class='profile-name'>"+creatives[i].display_name+"</div>"+
-				"<div class='profile-desc'>"+creatives[i].occupation+"</div>"+
-				"</div>"
-				)
-		};
+		$(".profile-name").append("<p class='profile-name'>" +dataFromBehance.creatives_to_follow[0].display_name+ "</p>");
+		$(".profile-desc").append("<p>" +dataFromBehance.creatives_to_follow[0].occupation+ "</p>");
+		$(".img-circle").attr("src",dataFromBehance.creatives_to_follow[0].images[276]);
 		getProjectData();
 		getSecond();
 		getThird();
@@ -47,8 +40,9 @@ function getSecond(){
 		url: "https://www.behance.net/v2/users/54023/projects?client_id=" + accessToken,
 		dataType: "jsonp",
 		success:function(dataFromBehance){
-			// console.log(dataFromBehance.projects[2].covers[202]);
-			// console.log(dataFromBehance.projects[2].name);
+			console.log(dataFromBehance.projects[2].covers[202]);
+			console.log(dataFromBehance.projects[2].name);
+
 			$(".two").append("<p>" +dataFromBehance.projects[2].name+ "</p>");
 			$(".second").attr("src", dataFromBehance.projects[2].covers['original']);
 			
@@ -65,8 +59,8 @@ function getThird(){
 		url: "https://www.behance.net/v2/users/54023/projects?client_id=" + accessToken,
 		dataType: "jsonp",
 		success:function(dataFromBehance){
-			// console.log(dataFromBehance.projects[6].covers[202]);
-			// console.log(dataFromBehance.projects[6].name);
+			console.log(dataFromBehance.projects[6].covers[202]);
+			console.log(dataFromBehance.projects[6].name);
 
 			$(".three").append("<p>" +dataFromBehance.projects[6].name+ "</p>");
 			$(".third").attr("src", dataFromBehance.projects[6].covers['original']);
