@@ -45,6 +45,9 @@
 		    flex-wrap: wrap;
 		    align-items: center;
 		    justify-content: center;
+            background-color: $color01;
+            border: 0.1px solid $color04;
+            border-radius: 2px;
 		    // border-radius: 2px;
             .profile-card{
                 display: flex;
@@ -127,12 +130,26 @@
 .projects{
     display: flex;
     flex-direction: row;
+    width: 900px;
+    height: auto;
+    background-color: $color01;
+    border: 0.1px solid $color04;
+    border-radius: 2px;
+    justify-content: space-around;
+    align-items: center;
     .profile-project_single{
-        width: 30px;
-        height: 30px;
-        img{
+        width: 30%;
+        height: 90%;
+        border: 1px solid $color04;
+        .project-img{
             width: 100%;
-
+            img{
+                width: 100%;
+            }  
+        }
+        .project-txt{
+            color: $color05;
+            font-weight: 100;
         }
     }
 }

@@ -31,8 +31,8 @@ function getProjectData(id){
 			for (var a = 0; a < projectOne.length; a++) {
 				// console.log(a);
 				$('[data-id=' + id + '] .projects').append("<div class='profile-project_single'>"+
-					"<img class='project-img first' src='"+projectOne[a].covers['original']+"' />"+
-					"<div class='project-txt one'>"+projectOne[a].name+"</div>"
+					"<img class='project-img' src='"+projectOne[a].covers['original']+"' />"+
+					"<div class='project-txt'>"+projectOne[a].name+"</div>"
 					+"</div>")
 			};
 		},
