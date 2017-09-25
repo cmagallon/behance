@@ -1,4 +1,5 @@
 var accessToken = "uLqA16H6sQWfTUFyQij6fsxlkDUSnckN";
+var accessToken2 = "gY1coRUiyVCbz5vGOQI9RuBShbPrslfB";
 
 $.ajax({
 		url: "https://api.behance.net/v2/creativestofollow?client_id=uLqA16H6sQWfTUFyQij6fsxlkDUSnckN",
@@ -18,7 +19,7 @@ $.ajax({
 	});
 
 	$.ajax({
-		url: "http://www.behance.net/v2/users/linnfritz?client_id="+ accessToken,
+		url: "http://www.behance.net/v2/users/linnfritz?client_id="+ accessToken2,
 	dataType: "jsonp",
 	success:function(dataFromBehance){
 		console.log(dataFromBehance);
