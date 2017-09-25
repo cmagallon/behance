@@ -1,3 +1,7 @@
+.modal-content {
+  height: 90%;
+}
+
 .top-bar{
     background-color: $color03;
     width: 100%;
@@ -81,8 +85,9 @@ h4{
 
 .content-text{
     padding-top: 40px;
-    width: 60%;
+    width: 50%;
     color: $color01;
+    float: left;
     h2{
         padding-left: 20px;
         margin: 0;
@@ -104,12 +109,9 @@ h4{
         border-radius: 200px;
     }
 }
-
 #chart{
     width: 50%;
-}
-.test{
-    height: 100px;
-    width: 200px;
-    background-color: blue;
+    float: right;
+    margin-top: 50px;
+
 }
