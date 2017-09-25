@@ -1,8 +1,44 @@
-var accessToken = "uLqA16H6sQWfTUFyQij6fsxlkDUSnckN";
-var accessToken2 = "gY1coRUiyVCbz5vGOQI9RuBShbPrslfB";
+
+
+// var config = require('config');
+
+var key;
+
+
+
+	$.ajax({
+				url: "./config.json",
+				dataType: "json",
+				beforeSend: function(xhr) {
+   				if (xhr.overrideMimeType) {
+     			xhr.overrideMimeType("application/json");
+   				}
+
+			},
+				success:function(data){
+					console.log("working")
+					key = data.APIkey;
+					console.log(key);
+
+					getData();
+
+				},
+
+			error:function(){
+				console.log("can't connect to Behance api");
+			}
+
+
+
+		});
+function getData(){
+	console.log(key);
+
+
+
 
 $.ajax({
-		url: "https://api.behance.net/v2/creativestofollow?client_id=uLqA16H6sQWfTUFyQij6fsxlkDUSnckN",
+		url: "http://www.behance.net/v2/users/hugheschri848c/following?client_id="+key,
 		dataType: "jsonp",
 		success:function(dataFromBehance){
 			console.log(dataFromBehance);
@@ -19,7 +55,7 @@ $.ajax({
 	});
 
 	$.ajax({
-		url: "http://www.behance.net/v2/users/linnfritz?client_id="+ accessToken2,
+		url: "http://www.behance.net/v2/users/linnfritz?client_id="+ key,
 	dataType: "jsonp",
 	success:function(dataFromBehance){
 		console.log(dataFromBehance);
@@ -30,24 +66,23 @@ $.ajax({
 		$(".likes-number").append(dataFromBehance.user.stats.appreciations);
 		$(".occupation").append(dataFromBehance.user.occupation);
 		$(".location").append(dataFromBehance.user.location);
+		if (dataFromBehance.user.social_links[1]) {
+			(".fa-twitter").hide;
+			console.log("hidden");
+
+		}else {
+			console.log("working");
+		}
+		console.log(dataFromBehance);
 
 
-			},
 
-			error:function(){
-				console.log("can't connect to Behance api");
-			}
-
-
-
-		});
-
-        var array = [
+		var array = [
 
         	{
           year: "2003",
-          Views: 1895,
-					Followers: 800
+          Followers: dataFromBehance.user.stats.followers,
+		  Following: dataFromBehance.user.stats.following
 
         }]
 
@@ -62,8 +97,8 @@ $.ajax({
 
         	var data = new google.visualization.DataTable();
         	data.addColumn('string','Year');
-        	data.addColumn('number','Views');
         	data.addColumn('number','Followers');
+        	data.addColumn('number','Following');
 
 
 
@@ -71,15 +106,15 @@ $.ajax({
         	for (var i = 0; i < array.length; i++) {
         		data.addRow([
         			array[i].Year,
-        			array[i].Views,
-        			array[i].Followers
+        			array[i].Followers,
+        			array[i].Following
 
         			])
         	}
 
 
         	var options ={
-        		title:'Views and Followers',
+        		title:'Followers and Following',
         		bars: 'horizontal',
 						colors: ['#2c3e50','#e74c3c'],
 						textStyle: {
@@ -104,3 +139,14 @@ $.ajax({
         	chart.draw(data, options);
 
         }
+			},
+
+			error:function(){
+				console.log("can't connect to Behance api");
+			}
+
+
+
+		});
+
+	}

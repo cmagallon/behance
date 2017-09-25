@@ -1,5 +1,4 @@
 
-
 // Code for popup profile
 
 // Get the modal
