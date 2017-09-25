@@ -34,7 +34,8 @@ function getData(){
       $(".projectName").append("<p>" +dataFromBehance.projects[0].name + "</p>");
       $(".fields").append("<p>" +dataFromBehance.projects[0].fields+ "</p>");
       $("#img1").append("<p><img src='" +dataFromBehance.projects[0].covers["original"] + "'></p>");
-      $("#thumbnail").append("<p><img src='" +dataFromBehance.projects[0].covers[115] + "'></p>");
+      $("#img2").append("<p><img src='" +dataFromBehance.projects[1].covers["original"] + "'></p>");
+      // $("#thumbnail").append("<p><img src='" +dataFromBehance.projects[0].covers[115] + "'></p>");
       $(".likeNum").append("<p>" +dataFromBehance.projects[0].stats["appreciations"]+ "</p>");
       $(".viewNum").append("<p>" +dataFromBehance.projects[0].stats["views"]+ "</p>");
 
