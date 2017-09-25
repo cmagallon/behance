@@ -170,23 +170,27 @@ html, body {
       flex-direction: row;
       justify-content: space-around;
       align-items: center; }
-      .home .profile .profile-project .profile-project_single {
-        background-color: #FFFFFF;
-        border: 1px solid #474747;
-        border-radius: 2px;
-        width: 260px;
-        height: 260px;
+      .home .profile .profile-project .projects {
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center; }
-        .home .profile .profile-project .profile-project_single .project-img {
-          width: 100%;
-          height: auto; }
-        .home .profile .profile-project .profile-project_single .project-txt {
-          color: #000000;
-          font-weight: 100;
-          font-size: 18px; }
+        flex-direction: row; }
+        .home .profile .profile-project .projects .profile-project_single {
+          background-color: #FFFFFF;
+          border: 1px solid #474747;
+          border-radius: 2px;
+          width: 260px;
+          height: 260px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          margin: 5px; }
+          .home .profile .profile-project .projects .profile-project_single .project-img {
+            width: 100%;
+            height: auto; }
+          .home .profile .profile-project .projects .profile-project_single .project-txt {
+            color: #000000;
+            font-weight: 100;
+            font-size: 18px; }
       .home .profile .profile-project .arrows {
         color: #000000;
         font-size: 30px; }

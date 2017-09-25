@@ -88,26 +88,31 @@
 		    flex-direction: row;
 		    justify-content: space-around;
 		    align-items: center;
-    		.profile-project_single{
-    			background-color: $color01;
-    			border: 1px solid $color04;
-    			border-radius: 2px;
-			    width: 260px;
-			    height: 260px;
-			    display: flex;
-			    flex-direction: column;
-			    justify-content: flex-start;
-			    align-items: center;
-			    .project-img{
-			    	width: 100%;
-			    	height: auto;
-			    }
-			    .project-txt{
-			    	color: $color05;
-			    	font-weight: 100;
-	    			font-size: 18px;
-			    }
-    		}
+            .projects{
+                display: flex;
+                flex-direction: row;
+                .profile-project_single{
+                    background-color: $color01;
+                    border: 1px solid $color04;
+                    border-radius: 2px;
+                    width: 260px;
+                    height: 260px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin: 5px;
+                    .project-img{
+                        width: 100%;
+                        height: auto;
+                    }
+                    .project-txt{
+                        color: $color05;
+                        font-weight: 100;
+                        font-size: 18px;
+                    }
+                }
+            }    		
     		.arrows{
     			color: $color05;
     			font-size: 30px;

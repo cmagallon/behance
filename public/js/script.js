@@ -8,20 +8,35 @@ $.ajax({
 		for (var i = 0; i < creatives.length; i++) {
 			console.log(i);
 			$("#modalProfile").append("<div class='profile-card'>"+
-				"<img class='img-circle' src='"+creatives[i].images[276]+"' />"+
+				"<img class='img-circle' src='"+creatives[i].images[138]+"' />"+
 				"<div class='profile-name'>"+creatives[i].display_name+"</div>"+
 				"<div class='profile-desc'>"+creatives[i].occupation+"</div>"+
 				"</div>"
 				)
 		};
+		getId();
 		getProjectData();
-		getSecond();
-		getThird();
 	},
 	error:function(){
 		console.log("can't connect to Behance api");
 	}
 });
+
+function getId(){
+	$.ajax({
+		url: "https://api.behance.net/v2/creativestofollow?client_id=" + accessToken,
+		dataType: "jsonp",
+		success:function(dataFromBehance){
+			var id = dataFromBehance.creatives_to_follow;
+			for (var b = 0; b < id.length; b++) {
+				console.log(b);				
+			};
+		},
+		error:function(){
+			console.log("can't connect to Behance api");
+		}
+	});
+}
 
 
 function getProjectData(){
@@ -29,58 +44,21 @@ function getProjectData(){
 		url: "https://www.behance.net/v2/users/54023/projects?client_id=" + accessToken,
 		dataType: "jsonp",
 		success:function(dataFromBehance){
-			// console.log(dataFromBehance.projects[0].covers[404]);
-			// console.log(dataFromBehance.projects[0].name);
-
-			$(".one").append("<p>" +dataFromBehance.projects[0].name+ "</p>");
-			$(".first").attr("src", dataFromBehance.projects[0].covers['original']);
-
+			var projectOne = dataFromBehance.projects;
+			for (var a = 0; a < projectOne.length; a++) {
+				console.log(a);
+				$(".projects").append("<div class='profile-project_single'>"+
+					"<img class='project-img first' src='"+projectOne[a].covers['original']+"' />"+
+					"<div class='project-txt one'>"+projectOne[a].name+"</div>"+
+					"</div>"
+					)
+			};
 		},
 		error:function(){
 			console.log("can't connect to Behance api");
 		}
 	});
 }
-
-function getSecond(){
-	$.ajax({
-		url: "https://www.behance.net/v2/users/54023/projects?client_id=" + accessToken,
-		dataType: "jsonp",
-		success:function(dataFromBehance){
-			// console.log(dataFromBehance.projects[2].covers[202]);
-			// console.log(dataFromBehance.projects[2].name);
-			$(".two").append("<p>" +dataFromBehance.projects[2].name+ "</p>");
-			$(".second").attr("src", dataFromBehance.projects[2].covers['original']);
-			
-			
-		},
-		error:function(){
-			console.log("can't connect to Behance api");
-		}
-	});
-}
-
-function getThird(){
-	$.ajax({
-		url: "https://www.behance.net/v2/users/54023/projects?client_id=" + accessToken,
-		dataType: "jsonp",
-		success:function(dataFromBehance){
-			// console.log(dataFromBehance.projects[6].covers[202]);
-			// console.log(dataFromBehance.projects[6].name);
-
-			$(".three").append("<p>" +dataFromBehance.projects[6].name+ "</p>");
-			$(".third").attr("src", dataFromBehance.projects[6].covers['original']);
-			
-			
-		},
-		error:function(){
-			console.log("can't connect to Behance api");
-		}
-	});
-}
-
-
-
 
 
 // Code for popup profile
