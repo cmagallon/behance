@@ -32,11 +32,11 @@ function getData(){
     
 
       $(".projectName").append("<p>" +dataFromBehance.projects[0].name + "</p>");
-      console.log(dataFromBehance.projects[0].name)
+      $(".fields").append("<p>" +dataFromBehance.projects[0].fields+ "</p>");
       $("#img1").append("<p><img src='" +dataFromBehance.projects[0].covers["original"] + "'></p>");
       $("#thumbnail").append("<p><img src='" +dataFromBehance.projects[0].covers[115] + "'></p>");
-      $("#likes").append("<p>" +dataFromBehance.projects[0].stats["appreciations"]+ "</p>");
-      $("#views").append("<p>" +dataFromBehance.projects[0].stats["views"]+ "</p>");
+      $(".likeNum").append("<p>" +dataFromBehance.projects[0].stats["appreciations"]+ "</p>");
+      $(".viewNum").append("<p>" +dataFromBehance.projects[0].stats["views"]+ "</p>");
 
 
 
