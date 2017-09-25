@@ -1,3 +1,7 @@
+.modal-content {
+  height: 90%;
+}
+
 .top-bar{
     background-color: $color03;
     width: 100%;
@@ -105,16 +109,11 @@ h4{
         border-radius: 200px;
     }
 }
-
 #chart{
     width: 50%;
     float: right;
-    padding-top: 100px;
-}
-.test{
-    height: 100px;
-    width: 200px;
-    background-color: blue;
+    margin-top: 50px;
+
 }
 
 .social-icons{

@@ -46,29 +46,9 @@ $.ajax({
 
         	{
           year: "2003",
-          ySales: 1895,
-          yExpenses: 10,
-          yProfit: 1507
-        }, {
-          year: "2008",
-          Sales: 129,
-          Expenses: 713,
-          Profit: 1064
-        }, {
-          year: "1994",
-          Sales: 564,
-          Expenses: 803,
-          profit: 473
-        }, {
-          year: "2007",
-          Sales: 336,
-          Expenses: 1459,
-          Profit: 889
-        }, {
-          year: "2011",
-          Sales: 513,
-          Expenses: 763,
-          Profit: 692
+          Views: 1895,
+					Followers: 800
+
         }]
 
 
@@ -83,31 +63,40 @@ $.ajax({
         	var data = new google.visualization.DataTable();
         	data.addColumn('string','Year');
         	data.addColumn('number','Views');
-        	data.addColumn('number','Likes');
-        	data.addColumn('number','Projects');
+        	data.addColumn('number','Followers');
+
+
 
 
         	for (var i = 0; i < array.length; i++) {
         		data.addRow([
         			array[i].Year,
-        			array[i].Sales,
-        			array[i].Expenses,
-        			array[i].Profit
+        			array[i].Views,
+        			array[i].Followers
+
         			])
         	}
 
 
         	var options ={
-        		title:'Data',
+        		title:'Views and Followers',
         		bars: 'horizontal',
+						colors: ['#2c3e50','#e74c3c'],
+						textStyle: {
+	 					color: ['#FFFFFF']
+ 						},
+						gridlines: {
+        		color: '#FFFFFF'
+      			},
         		animation: {
         			startup: true,
         			duration: 1000,
         			easing: 'out'
         		},
-        		width: 400,
-        		height: 300,
-                backgroundColor: "#4771C8"
+						chartArea: {width: '50%'},
+        		width: 500,
+        		height: 400,
+            backgroundColor: "#4771C8"
 
         	}
 

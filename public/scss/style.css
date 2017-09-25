@@ -183,6 +183,9 @@ html, body {
         color: #000000;
         font-size: 30px; }
 
+.modal-content {
+  height: 90%; }
+
 .top-bar {
   background-color: #3E62B0;
   width: 100%;
@@ -276,12 +279,7 @@ h4 {
 #chart {
   width: 50%;
   float: right;
-  padding-top: 100px; }
-
-.test {
-  height: 100px;
-  width: 200px;
-  background-color: blue; }
+  margin-top: 50px; }
 
 .social-icons {
   font-size: 44px;
