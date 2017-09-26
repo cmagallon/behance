@@ -129,26 +129,26 @@ function getData(){
 	}
 
 
-		$.ajax({
-			url: "https://api.behance.net/v2/creativestofollow?client_id="+key,
-			dataType: "jsonp",
-			success:function(dataFromBehance){
-				// console.log(dataFromBehance.creatives_to_follow);
-				profile = dataFromBehance.creatives_to_follow;
-				console.log(profile);
-				for (var i = 0; i < profile.length; i++) {
-					designerIDs.push(dataFromBehance.creatives_to_follow[i]);
-
-
-			},
-
-			error:function(){
-				console.log("can't connect to Behance api");
-			}
-
-
-
-		});
+		// $.ajax({
+		// 	url: "https://api.behance.net/v2/creativestofollow?client_id="+key,
+		// 	dataType: "jsonp",
+		// 	success:function(dataFromBehance){
+		// 		// console.log(dataFromBehance.creatives_to_follow);
+		// 		profile = dataFromBehance.creatives_to_follow;
+		// 		console.log(profile);
+		// 		for (var i = 0; i < profile.length; i++) {
+		// 			designerIDs.push(dataFromBehance.creatives_to_follow[i]);
+		//
+		//
+		// 	},
+		//
+		// 	error:function(){
+		// 		console.log("can't connect to Behance api");
+		// 	}
+		//
+		//
+		//
+		// });
 
 
 	function getProfile() {

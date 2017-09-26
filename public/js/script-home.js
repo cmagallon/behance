@@ -1,3 +1,31 @@
+
+$.ajax({
+			url: "./config.json",
+			dataType: "json",
+			beforeSend: function(xhr) {
+			if (xhr.overrideMimeType) {
+			xhr.overrideMimeType("application/json");
+			}
+
+		},
+			success:function(data){
+				console.log("workingTest")
+				key = data.APIkey;
+
+
+				getData();
+
+			},
+
+		error:function(){
+			console.log("can't connect to Behance api");
+		}
+
+
+
+	});
+function getData(){
+
 $.ajax({
 	url: "https://api.behance.net/v2/creativestofollow?client_id=" + key,
 	dataType: "jsonp",
@@ -98,5 +126,7 @@ span.onclick = function() {
 });
 
 });
+
+}
 
 // When the user clicks on <span> (x), close the modal
