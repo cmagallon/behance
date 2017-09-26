@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-var accessToken = "k881c8hHjZvoOUo53VMkZU8crZAAGMel";
-=======
 var accessToken = "PysPvDxz94Wyl4wNY5vMnXZ60NcRHbly";
->>>>>>> origin/kirstypopup
 
 $.ajax({
 	url: "https://api.behance.net/v2/creativestofollow?client_id=" + accessToken,
@@ -52,12 +48,12 @@ $(document).on('click', '.profile-project_single', function(e) {
 	console.log(projectId);
 
 	$.ajax({
-	
+
 	url: "https://api.behance.net/v2/projects/"+ projectId +"?api_key=" + accessToken,
 	dataType: "jsonp",
 	success:function(dataFromBehance){
 		console.log(dataFromBehance);
-		
+
 		var projectName = dataFromBehance.project.name;
 		console.log(projectName);
 		var fields = dataFromBehance.project.fields;
@@ -68,9 +64,9 @@ $(document).on('click', '.profile-project_single', function(e) {
 		console.log(likeNum);
 		var projectImage = dataFromBehance.project.covers['original'];
 		console.log(projectImage);
-		
-		
-		
+
+
+
 
 		// Code for popup profile
 
@@ -106,4 +102,3 @@ span.onclick = function() {
 });
 
 // When the user clicks on <span> (x), close the modal
-
