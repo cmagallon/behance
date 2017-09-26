@@ -288,4 +288,16 @@ h4 {
   .social-icons i {
     color: white; }
 
+#what-we-do {
+  font-weight: 200;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto; }
+  #what-we-do h2 {
+    font-size: 3em;
+    font-weight: 200; }
+  #what-we-do h3 {
+    font-weight: 200;
+    font-size: 2em; }
+
 /*# sourceMappingURL=style.css.map */

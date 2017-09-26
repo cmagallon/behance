@@ -66,14 +66,9 @@ $.ajax({
 		$(".likes-number").append(dataFromBehance.user.stats.appreciations);
 		$(".occupation").append(dataFromBehance.user.occupation);
 		$(".location").append(dataFromBehance.user.location);
-		if (dataFromBehance.user.social_links[1]) {
-			(".fa-twitter").hide;
-			console.log("hidden");
+		$(".company").append(dataFromBehance.user.company);
+		$(".website").append(dataFromBehance.user.website);
 
-		}else {
-			console.log("working");
-		}
-		console.log(dataFromBehance);
 
 
 
