@@ -1,4 +1,4 @@
-var accessToken = "uLqA16H6sQWfTUFyQij6fsxlkDUSnckN";
+var accessToken = "kPjbO9ychhcXHOcnuBdYaUtWryHz5a5G";
 
 $.ajax({
 	url: "https://api.behance.net/v2/creativestofollow?client_id=" + accessToken,
