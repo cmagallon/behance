@@ -75,7 +75,7 @@ $.ajax({
 		var array = [
 
         	{
-          year: "2003",
+
           Followers: dataFromBehance.user.stats.followers,
 		  Following: dataFromBehance.user.stats.following
 
@@ -123,7 +123,11 @@ $.ajax({
         			duration: 1000,
         			easing: 'out'
         		},
-						chartArea: {width: '50%'},
+				titleTextStyle: {
+			    color: '#FFFFFF',
+				size: '24px'
+			},
+				chartArea: {width: '50%'},
         		width: 500,
         		height: 400,
             backgroundColor: "#4771C8"
