@@ -1,8 +1,5 @@
 
-
-// var config = require('config');
-
-var key;
+var key, profile;
 
 
 
@@ -16,9 +13,9 @@ var key;
 
 			},
 				success:function(data){
-					console.log("working")
+					console.log("workingTest")
 					key = data.APIkey;
-					console.log(key);
+
 
 					getData();
 
@@ -32,27 +29,8 @@ var key;
 
 		});
 function getData(){
-	console.log(key);
 
 
-
-
-$.ajax({
-		url: "http://www.behance.net/v2/users/hugheschri848c/following?client_id="+key,
-		dataType: "jsonp",
-		success:function(dataFromBehance){
-			console.log(dataFromBehance);
-
-
-		},
-
-		error:function(){
-			console.log("can't connect to Behance api");
-		}
-
-
-
-	});
 
 	$.ajax({
 		url: "http://www.behance.net/v2/users/linnfritz?client_id="+ key,
@@ -150,3 +128,49 @@ $.ajax({
 		});
 
 	}
+
+
+		$.ajax({
+			url: "https://api.behance.net/v2/creativestofollow?client_id="+key,
+			dataType: "jsonp",
+			success:function(dataFromBehance){
+				// console.log(dataFromBehance.creatives_to_follow);
+				profile = dataFromBehance.creatives_to_follow;
+				console.log(profile);
+				for (var i = 0; i < profile.length; i++) {
+					designerIDs.push(dataFromBehance.creatives_to_follow[i]);
+
+
+			},
+
+			error:function(){
+				console.log("can't connect to Behance api");
+			}
+
+
+
+		});
+
+
+	function getProfile() {
+		$.ajax({
+			url: "http://www.behance.net/v2/users/" + profile + "creativestofollow?client_id=" + key,
+			dataType: "jsonp",
+			success: function(dataFromBehance) {
+				for (var i = 0; i < dataFromBehance.creatives_to_follow.length; i++) {
+					designerIDs.push(dataFromBehance.creatives_to_follow[i]);
+
+					console.log(profile);
+				};
+
+				getProjects();
+			},
+			error: function() {
+				console.log("Something Went Wrong");
+			}
+		})
+	}
+
+function getProjects(){
+	// console.log("hello")
+}
