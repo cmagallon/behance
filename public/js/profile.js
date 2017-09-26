@@ -66,21 +66,16 @@ $.ajax({
 		$(".likes-number").append(dataFromBehance.user.stats.appreciations);
 		$(".occupation").append(dataFromBehance.user.occupation);
 		$(".location").append(dataFromBehance.user.location);
-		if (dataFromBehance.user.social_links[1]) {
-			(".fa-twitter").hide;
-			console.log("hidden");
+		$(".company").append(dataFromBehance.user.company);
+		$(".website").append(dataFromBehance.user.website);
 
-		}else {
-			console.log("working");
-		}
-		console.log(dataFromBehance);
 
 
 
 		var array = [
 
         	{
-          year: "2003",
+
           Followers: dataFromBehance.user.stats.followers,
 		  Following: dataFromBehance.user.stats.following
 
@@ -128,7 +123,11 @@ $.ajax({
         			duration: 1000,
         			easing: 'out'
         		},
-						chartArea: {width: '50%'},
+				titleTextStyle: {
+			    color: '#FFFFFF',
+				size: '24px'
+			},
+				chartArea: {width: '50%'},
         		width: 500,
         		height: 400,
             backgroundColor: "#4771C8"

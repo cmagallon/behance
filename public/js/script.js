@@ -5,7 +5,7 @@
 var modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
-var profileModal = document.getElementById("modalProfile");
+var profileModal = $(".modal-content");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
