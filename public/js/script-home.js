@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 var accessToken = "k881c8hHjZvoOUo53VMkZU8crZAAGMel";
+=======
+var accessToken = "PysPvDxz94Wyl4wNY5vMnXZ60NcRHbly";
+>>>>>>> origin/kirstypopup
 
 $.ajax({
 	url: "https://api.behance.net/v2/creativestofollow?client_id=" + accessToken,
@@ -43,5 +47,63 @@ function getProjectData(id){
 }
 
 $(document).on('click', '.profile-project_single', function(e) {
-	console.log($(this)[0].dataset.id);
+	// console.log($(this)[0].dataset.id);
+	var projectId = $(this)[0].dataset.id;
+	console.log(projectId);
+
+	$.ajax({
+	
+	url: "https://api.behance.net/v2/projects/"+ projectId +"?api_key=" + accessToken,
+	dataType: "jsonp",
+	success:function(dataFromBehance){
+		console.log(dataFromBehance);
+		
+		var projectName = dataFromBehance.project.name;
+		console.log(projectName);
+		var fields = dataFromBehance.project.fields;
+		console.log(fields);
+		var viewNum = dataFromBehance.project.stats.views;
+		console.log(viewNum);
+		var likeNum = dataFromBehance.project.stats.appreciations;
+		console.log(likeNum);
+		var projectImage = dataFromBehance.project.covers['original'];
+		console.log(projectImage);
+		
+		
+		
+
+		// Code for popup profile
+
+// Get the modal
+	var modal = document.getElementById('projectModal');
+	modal.style.display = "block";
+
+	//image
+	// get getElementById
+	// remove currnet src
+	//add new
+
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+var span = document.getElementsByClassName("closeProject")[0];
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+	},
+	error:function(){
+		console.log("can't connect to Behance api");
+	}
 });
+
+});
+
+// When the user clicks on <span> (x), close the modal
+
