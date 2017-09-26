@@ -59,7 +59,7 @@
 
 .project-text{
     width: 700px;
-    margin-left: 180px;
+    margin-left: 90px;
     margin-top: 20px;
 }
 
@@ -67,15 +67,16 @@
     font-size: 25px;
 }
 
-.projectName{
-    font-size: 20px;
+#project-name{
+    font-size: 25px;
+    margin-left: 30px;
 }
 
-.likeNum {
+#like-num {
         position: relative;
         bottom: 15px;
 }
-.viewNum {
+#view-num {
         position: relative;
         bottom: 15px;
 }

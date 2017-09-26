@@ -65,21 +65,12 @@ $(document).on('click', '.profile-project_single', function(e) {
 		var projectImage = dataFromBehance.project.covers['original'];
 		console.log(projectImage);
 		
-		
-		
 
 		// Code for popup profile
 
 // Get the modal
 	var modal = document.getElementById('projectModal');
 	modal.style.display = "block";
-
-	//image
-	// get getElementById
-	// remove currnet src
-	//add new
-
-
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
@@ -90,8 +81,24 @@ window.onclick = function(event) {
 
 var span = document.getElementsByClassName("closeProject")[0];
 span.onclick = function() {
+
     modal.style.display = "none";
+    $("#project-name").empty("<p>" +dataFromBehance.project.name + "</p>");
+    $("#fields").empty("<p>" +dataFromBehance.project.fields + "</p>");
+	$("#view-num").empty("<p>" +dataFromBehance.project.stats.views + "</p>");
+	$("#like-num").empty("<p>" +dataFromBehance.project.stats.appreciations + "</p>");
+	$("#img1").empty("<p><img src='" +dataFromBehance.project.covers["original"] + "'></p>");
+
+
+
 }
+
+$("#project-name").append("<p>" +dataFromBehance.project.name + "</p>");
+$("#fields").append("<p>" +dataFromBehance.project.fields + "</p>");
+$("#view-num").append("<p>" +dataFromBehance.project.stats.views + "</p>");
+$("#like-num").append("<p>" +dataFromBehance.project.stats.appreciations + "</p>");
+$("#img1").append("<p><img src='" +dataFromBehance.project.covers["original"] + "'></p>");
+
 
 	},
 	error:function(){
