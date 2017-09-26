@@ -57,6 +57,85 @@ html, body {
   cursor: pointer;
   font-weight: 300; }
 
+/*CSS Modal*/
+/* The Modal Project(background) */
+.modalProject {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Black w/ opacity */ }
+
+/* Modal Content/Box */
+#modal-contentProject {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  width: 80%;
+  /* Could be more or less, depending on screen size */ }
+
+/* The Close Button */
+.closeProject {
+  color: #ffffff;
+  /*float: right;*/
+  font-size: 50px;
+  font-weight: bold;
+  margin: 20px;
+  margin-top: 50px; }
+
+.closeProject:hover,
+.closeProject:focus {
+  color: whtie;
+  text-decoration: none;
+  cursor: pointer; }
+
+#img1 {
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 3px; }
+
+#img1 img {
+  width: 100%; }
+
+.profileimage {
+  float: left;
+  margin-left: 20px; }
+
+.profileimage img {
+  border-radius: 50%; }
+
+.project-text {
+  width: 700px;
+  margin-left: 180px;
+  margin-top: 20px; }
+
+.designerName {
+  font-size: 25px; }
+
+.projectName {
+  font-size: 20px; }
+
+.likeNum {
+  position: relative;
+  bottom: 15px; }
+
+.viewNum {
+  position: relative;
+  bottom: 15px; }
+
 .header {
   background-color: #3E62B0;
   font-family: 'Montserrat', sans-serif;
@@ -83,7 +162,7 @@ html, body {
     .header .header-menu ul {
       width: 100%;
       display: flex;
-      justify-content: space-evenly; }
+      justify-content: space-around; }
       .header .header-menu ul li {
         list-style-type: none; }
         .header .header-menu ul li a {
@@ -91,6 +170,8 @@ html, body {
           color: #FFFFFF;
           text-transform: uppercase;
           font-weight: 100; }
+          .header .header-menu ul li a:hover {
+            color: #000000; }
 
 .home {
   height: auto;
@@ -120,7 +201,6 @@ html, body {
       display: flex;
       justify-content: center; }
   .home .profile {
-    width: 80%;
     height: 300px;
     margin-bottom: 50px;
     margin-top: 30px;
@@ -128,18 +208,33 @@ html, body {
     flex-direction: row;
     justify-content: space-between; }
     .home .profile .profile-pic {
-      background-color: #FFFFFF;
-      border: 0.1px solid #474747;
       width: 300px;
-      height: 300px;
+      height: auto;
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
+      background-color: #FFFFFF;
+      flex-direction: column;
       border-radius: 2px; }
+      .home .profile .profile-pic:hover {
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.7);
+        transition: box-shadow 0.3s ease-in-out;
+        cursor: pointer; }
+      .home .profile .profile-pic .profile-card {
+        display: flex;
+        flex-direction: column;
+        background-color: #FFFFFF;
+        border: 0.1px solid #474747;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px; }
       .home .profile .profile-pic img {
         width: 70%;
-        height: auto; }
+        height: auto;
+        margin-top: 10px; }
       .home .profile .profile-pic .img-circle {
         border-radius: 50%; }
       .home .profile .profile-pic .profile-name {
@@ -151,37 +246,59 @@ html, body {
         color: #000000;
         font-weight: 100;
         font-size: 15px;
-        margin: 0; }
-    .home .profile .profile-project {
-      background-color: #FFFFFF;
-      border: 0.1px solid #474747;
-      border-radius: 2px;
-      width: 1010px;
-      height: 300px;
+        margin: 0;
+        text-align: center; }
+
+#behanceUsers {
+  width: 80%; }
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  width: 900px;
+  height: auto;
+  background-color: #FFFFFF;
+  border-radius: 2px;
+  justify-content: space-around;
+  align-items: center; }
+  .projects .profile-project_single {
+    width: 30%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; }
+    .projects .profile-project_single:hover {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      border-radius: 2px; }
+    .projects .profile-project_single .project-img {
+      width: 100%; }
+    .projects .profile-project_single .project-txt {
+      color: #4771C9;
+      font-weight: 100;
+      text-transform: lowercase;
+      font-size: 15px; }
+
+#whatwedo {
+  display: flex;
+  margin-bottom: 50px;
+  flex-direction: column;
+  align-items: center; }
+  #whatwedo .information {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 80%; }
+    #whatwedo .information h2 {
       display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center; }
-      .home .profile .profile-project .profile-project_single {
-        background-color: #FFFFFF;
-        border: 1px solid #474747;
-        border-radius: 2px;
-        width: 260px;
-        height: 260px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center; }
-        .home .profile .profile-project .profile-project_single .project-img {
-          width: 100%;
-          height: auto; }
-        .home .profile .profile-project .profile-project_single .project-txt {
-          color: #000000;
-          font-weight: 100;
-          font-size: 18px; }
-      .home .profile .profile-project .arrows {
-        color: #000000;
-        font-size: 30px; }
+      align-self: center;
+      font-weight: 200;
+      font-size: 50px; }
+    #whatwedo .information h3 {
+      font-weight: 200;
+      font-size: 2em; }
 
 .modal-content {
   height: 90%; }

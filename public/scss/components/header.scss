@@ -26,7 +26,7 @@
 		ul{
 			width: 100%;
 			display: flex;
-    		justify-content: space-evenly;
+    		justify-content: space-around;
 			li{
 				list-style-type: none;
 				a{
@@ -34,6 +34,9 @@
 					color: $color01;
 					text-transform: uppercase;
     				font-weight: 100;
+    				&:hover{
+    					color: $color05;
+    				}
 				}
 			}
 		}
