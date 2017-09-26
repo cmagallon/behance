@@ -1,4 +1,4 @@
-var accessToken = "kPjbO9ychhcXHOcnuBdYaUtWryHz5a5G";
+var accessToken = "k881c8hHjZvoOUo53VMkZU8crZAAGMel";
 
 $.ajax({
 	url: "https://api.behance.net/v2/creativestofollow?client_id=" + accessToken,
@@ -31,7 +31,7 @@ function getProjectData(id){
 			for (var a = 0; a < projectOne.length; a++) {
 				// console.log(a);
 				$('[data-id=' + id + '] .projects').append("<div data-id='"+projectOne[a].id+"' class='profile-project_single'>"+
-					"<img class='project-img' src='"+projectOne[a].covers['original']+"' />"+
+					"<img class='project-img' src='"+projectOne[a].covers[202]+"' />"+
 					"<div class='project-txt'>"+projectOne[a].name+"</div>"
 					+"</div>")
 			};

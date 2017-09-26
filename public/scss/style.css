@@ -270,10 +270,10 @@ html, body {
     justify-content: space-around; }
     .projects .profile-project_single:hover {
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-      cursor: pointer; }
+      cursor: pointer;
+      border-radius: 2px; }
     .projects .profile-project_single .project-img {
-      width: 100%;
-      max-height: 150px; }
+      width: 100%; }
     .projects .profile-project_single .project-txt {
       color: #4771C9;
       font-weight: 100;
