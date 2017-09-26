@@ -31,7 +31,7 @@
 		}
 	}
 	.profile{
-    	width: 80%;
+    	// width: 80%;
 	    height: 300px;
 	    margin-bottom: 50px;
     	margin-top: 30px;
@@ -39,18 +39,37 @@
     	flex-direction: row;
     	justify-content: space-between;
     	.profile-pic{
-    		background-color: $color01;
-    		border: 0.1px solid $color04;
     		width: 300px;
-    		height: 300px;
+    		height: auto;
 		    display: flex;
-		    flex-direction: column;
+		    flex-wrap: wrap;
 		    align-items: center;
 		    justify-content: center;
-		    border-radius: 2px;
+            background-color: $color01;
+            flex-direction: column;
+            // border: 0.1px solid $color04;
+            border-radius: 2px;
+		    // border-radius: 2px;
+            &:hover{
+                box-shadow: 0 15px 25px rgba(0,0,0,0.7);
+                transition: box-shadow 0.3s ease-in-out;
+                cursor: pointer;
+            }
+            .profile-card{
+                display: flex;
+                flex-direction: column;
+                background-color: $color01;
+                border: 0.1px solid $color04;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 30px;
+            }
     		img{
     			width: 70%;
     			height: auto;
+                margin-top: 10px;
     		}
     		.img-circle{
     			border-radius: 50%;
@@ -66,42 +85,115 @@
     			font-weight: 100;
     			font-size: 15px;
     			margin: 0;
+                text-align: center;
     		}
     	}
-    	.profile-project{
-    		background-color: $color01;
-    		border: 0.1px solid $color04;
-    		border-radius: 2px;
-    		width: 1010px;
-    		height: 300px;
-    		display: flex;
-		    flex-direction: row;
-		    justify-content: space-around;
-		    align-items: center;
-    		.profile-project_single{
-    			background-color: $color01;
-    			border: 1px solid $color04;
-    			border-radius: 2px;
-			    width: 260px;
-			    height: 260px;
-			    display: flex;
-			    flex-direction: column;
-			    justify-content: flex-start;
-			    align-items: center;
-			    .project-img{
-			    	width: 100%;
-			    	height: auto;
-			    }
-			    .project-txt{
-			    	color: $color05;
-			    	font-weight: 100;
-	    			font-size: 18px;
-			    }
-    		}
-    		.arrows{
-    			color: $color05;
-    			font-size: 30px;
-    		}
-    	}
+    	// .profile-project{
+    	// 	background-color: $color01;
+    	// 	border: 0.1px solid $color04;
+    	// 	border-radius: 2px;
+    	// 	width: 1010px;
+    	// 	height: 300px;
+    	// 	display: flex;
+		   //  flex-direction: row;
+		   //  justify-content: space-around;
+		   //  align-items: center;
+     //        .projects{
+     //            display: flex;
+     //            flex-direction: row;
+     //            .profile-project_single{
+     //                background-color: $color01;
+     //                border: 1px solid $color04;
+     //                border-radius: 2px;
+     //                width: 260px;
+     //                height: 260px;
+     //                display: flex;
+     //                flex-direction: column;
+     //                justify-content: flex-start;
+     //                align-items: center;
+     //                margin: 5px;
+     //                .project-img{
+     //                    width: 100%;
+     //                    height: auto;
+     //                }
+     //                .project-txt{
+     //                    color: $color05;
+     //                    font-weight: 100;
+     //                    font-size: 18px;
+     //                }
+     //            }
+     //        }    		
+    	// 	.arrows{
+    	// 		color: $color05;
+    	// 		font-size: 30px;
+    	// 	}
+    	// }
 	}
+}
+#behanceUsers{
+    width: 80%;
+}
+
+.projects{
+    display: flex;
+    flex-direction: row;
+    width: 900px;
+    height: auto;
+    background-color: $color01;
+    // border: 0.1px solid $color04;
+    border-radius: 2px;
+    justify-content: space-around;
+    align-items: center;
+    .profile-project_single{
+        width: 30%;
+        height: 90%;
+        // border: 1px solid $color04;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        &:hover{
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+        .project-img{
+            width: 100%;
+            max-height: 150px;
+            // img{
+            //     width: 100%;
+            //     max-height: 150px;
+            // }  
+        }
+        .project-txt{
+            color: $color02;
+            font-weight: 100;
+            text-transform: lowercase;
+            font-size: 15px;
+        }
+    }
+}
+
+#whatwedo{
+    display: flex;
+    margin-bottom: 50px;
+    flex-direction: column;
+    align-items: center;
+    .information{
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        text-align: center;
+        width: 80%;
+        h2{
+                display: flex;
+                align-self: center;
+                font-weight: 200;
+                font-size: 50px;
+        }
+        h3{
+            font-weight: 200;
+            font-size: 2em;
+        }
+    }
+    
 }
