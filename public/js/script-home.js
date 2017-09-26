@@ -1,7 +1,5 @@
-var accessToken = "PysPvDxz94Wyl4wNY5vMnXZ60NcRHbly";
-
 $.ajax({
-	url: "https://api.behance.net/v2/creativestofollow?client_id=" + accessToken,
+	url: "https://api.behance.net/v2/creativestofollow?client_id=" + key,
 	dataType: "jsonp",
 	success:function(dataFromBehance){
 		var creatives = dataFromBehance.creatives_to_follow;
@@ -24,7 +22,7 @@ $.ajax({
 function getProjectData(id){
 	// console.log(id);
 	$.ajax({
-		url: "https://www.behance.net/v2/users/"+id+"/projects?client_id=" + accessToken +"&per_page=3",
+		url: "https://www.behance.net/v2/users/"+id+"/projects?client_id=" + key +"&per_page=3",
 		dataType: "jsonp",
 		success:function(dataFromBehance){
 			var projectOne = dataFromBehance.projects;
@@ -49,7 +47,7 @@ $(document).on('click', '.profile-project_single', function(e) {
 
 	$.ajax({
 
-	url: "https://api.behance.net/v2/projects/"+ projectId +"?api_key=" + accessToken,
+	url: "https://api.behance.net/v2/projects/"+ projectId +"?api_key=" + key,
 	dataType: "jsonp",
 	success:function(dataFromBehance){
 		console.log(dataFromBehance);

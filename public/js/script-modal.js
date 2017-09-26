@@ -1,4 +1,4 @@
-var accessToken = "uLqA16H6sQWfTUFyQij6fsxlkDUSnckN";
+var key = "uLqA16H6sQWfTUFyQij6fsxlkDUSnckN";
 
 $.ajax({
 		url: "https://api.behance.net/v2/creativestofollow?client_id=uLqA16H6sQWfTUFyQij6fsxlkDUSnckN",
@@ -18,12 +18,12 @@ $.ajax({
 
 function projectId(){
 	$.ajax({
-		
-    url: "https://api.behance.net/v2/users/matiascorea/projects?client_id="+accessToken,
+
+    url: "https://api.behance.net/v2/users/matiascorea/projects?client_id="+key,
 		dataType: "jsonp",
 		success:function(dataFromBehance){
 
-			
+
 			console.log(dataFromBehance);
 			console.log(dataFromBehance.projects[0].id);
 
@@ -52,7 +52,7 @@ var btnProject = document.getElementById("project1");
 // Get the <span> element that closes the modal
 var spanProject = document.getElementsByClassName("closeProject")[0];
 
-// When the user clicks on the button, open the modal 
+// When the user clicks on the button, open the modal
 btnProject.onclick = function() {
     modalProject.style.display = "block";
 }
@@ -71,6 +71,6 @@ window.onclick = function(event) {
 
 // for (var i = 0; i < dataFromBehance.projects.length; i++) {
 //       //           console.log(dataFromBehance.projects[0])
-                
-                
+
+
 //             }

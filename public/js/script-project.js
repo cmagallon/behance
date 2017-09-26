@@ -1,4 +1,4 @@
-var accessToken = "uLqA16H6sQWfTUFyQij6fsxlkDUSnckN";
+var key = "uLqA16H6sQWfTUFyQij6fsxlkDUSnckN";
 
 
 $.ajax({
@@ -21,10 +21,10 @@ $.ajax({
   });
 
 
-function getData(){	
+function getData(){
 	$.ajax({
-		
-    url: "https://api.behance.net/v2/users/matiascorea/projects?client_id="+accessToken,
+
+    url: "https://api.behance.net/v2/users/matiascorea/projects?client_id="+key,
 		dataType: "jsonp",
 		success:function(dataFromBehance){
 
@@ -35,8 +35,8 @@ function getData(){
     //do anther request to get the first 3 projects for that user id
     //loop over the result of that request
     //for each cylce in the loop, append a div with <div class="profile-project_single" data-projectID="id of the project">
-			
-    
+
+
       // Pulling data for main project display
       // $(".projectName").append("<p>" +dataFromBehance.projects[0].name + "</p>");
       // $(".project-txt").append("<p>" +dataFromBehance.projects[0].name + "</p>");
@@ -58,8 +58,8 @@ function getData(){
 
       // for (var i = 0; i < dataFromBehance.projects.length; i++) {
       //           console.log(dataFromBehance.projects[0])
-                
-                
+
+
       //       }
 
 
@@ -73,21 +73,21 @@ function getData(){
 
 }
 
-function getUserData(){ 
+function getUserData(){
   $.ajax({
-    
+
     url: "https://api.behance.net/v2/users/matiascorea?client_id="+accessToken,
     dataType: "jsonp",
     success:function(dataFromBehance){
 
-    
+
 
       $(".profileimage").append("<p><img src='" +dataFromBehance.user["images"][138] + "'></p>");
       $("#modalProfile").append("<p><img src='" +dataFromBehance.user["images"][138] + "'></p>");
 
       $(".designerName").append("<p>" +dataFromBehance.user.display_name + "</p>");
-      
-  
+
+
     },
 
     error:function(){
