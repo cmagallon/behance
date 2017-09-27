@@ -28,7 +28,7 @@ function getData(){
 			for (var i = 0; i < creatives.length; i++) {
 				// console.log(creatives[i]);
 				$("#behanceUsers").append("<div data-id='"+creatives[i].id+"'class='profile'>"+
-					"<div class='profile-pic'>"+ "<img class='img-circle' src='"+
+					"<div data-id="+creatives[i].id+" class='profile-pic'>"+ "<img class='img-circle' src='"+
 					creatives[i].images[138]+"'/>"+
 					"<h2 class='profile-name'>"+creatives[i].display_name+"</h2>"+
 					"<h3 class='profile-desc'>"+creatives[i].occupation+"</h3>"
@@ -65,70 +65,70 @@ function getProjectData(id){
 
 $(document).on('click', '.profile-project_single', function(e) {
 	// console.log($(this)[0].dataset.id);
-	var projectId = $(this)[0].dataset.id;
-	console.log(projectId);
+		var projectId = $(this)[0].dataset.id;
+		console.log(projectId);
 
-	$.ajax({
+		$.ajax({
 
-	url: "https://api.behance.net/v2/projects/"+ projectId +"?api_key=" + key,
-	dataType: "jsonp",
-	success:function(dataFromBehance){
-		console.log(dataFromBehance);
+		url: "https://api.behance.net/v2/projects/"+ projectId +"?api_key=" + key,
+		dataType: "jsonp",
+		success:function(dataFromBehance){
+			console.log(dataFromBehance);
 
-		var projectName = dataFromBehance.project.name;
-		console.log(projectName);
-		var fields = dataFromBehance.project.fields;
-		console.log(fields);
-		var viewNum = dataFromBehance.project.stats.views;
-		console.log(viewNum);
-		var likeNum = dataFromBehance.project.stats.appreciations;
-		console.log(likeNum);
-		var projectImage = dataFromBehance.project.covers['original'];
-		console.log(projectImage);
-
-
-		// Code for popup profile
-
-// Get the modal
-	var modal = document.getElementById('projectModal');
-	modal.style.display = "block";
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-var span = document.getElementsByClassName("closeProject")[0];
-span.onclick = function() {
-
-    modal.style.display = "none";
-    $("#project-name").empty("<p>" +dataFromBehance.project.name + "</p>");
-    $("#fields").empty("<p>" +dataFromBehance.project.fields + "</p>");
-    $("#description").empty("<p>" +dataFromBehance.project.description + "</p>");
-	$("#view-num").empty("<p>" +dataFromBehance.project.stats.views + "</p>");
-	$("#like-num").empty("<p>" +dataFromBehance.project.stats.appreciations + "</p>");
-	$("#img1").empty("<p><img src='" +dataFromBehance.project.covers["original"] + "'></p>");
+			var projectName = dataFromBehance.project.name;
+			console.log(projectName);
+			var fields = dataFromBehance.project.fields;
+			console.log(fields);
+			var viewNum = dataFromBehance.project.stats.views;
+			console.log(viewNum);
+			var likeNum = dataFromBehance.project.stats.appreciations;
+			console.log(likeNum);
+			var projectImage = dataFromBehance.project.covers['original'];
+			console.log(projectImage);
 
 
+			// Code for popup profile
 
-},
+	// Get the modal
+		var modal = document.getElementById('projectModal');
+		modal.style.display = "block";
 
-$("#project-name").append("<p>" +dataFromBehance.project.name + "</p>");
-$("#fields").append("<p>" +dataFromBehance.project.fields + "</p>");
-$("#description").append("<p>" +dataFromBehance.project.description + "</p>");
-$("#view-num").append("<p>" +dataFromBehance.project.stats.views + "</p>");
-$("#like-num").append("<p>" +dataFromBehance.project.stats.appreciations + "</p>");
-$("#img1").append("<p><img src='" +dataFromBehance.project.covers["original"] + "'></p>");
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+	    if (event.target == modal) {
+	        modal.style.display = "none";
+	    }
+	}
+
+	var span = document.getElementsByClassName("closeProject")[0];
+	span.onclick = function() {
+
+	    modal.style.display = "none";
+	    $("#project-name").empty("<p>" +dataFromBehance.project.name + "</p>");
+	    $("#fields").empty("<p>" +dataFromBehance.project.fields + "</p>");
+	    $("#description").empty("<p>" +dataFromBehance.project.description + "</p>");
+		$("#view-num").empty("<p>" +dataFromBehance.project.stats.views + "</p>");
+		$("#like-num").empty("<p>" +dataFromBehance.project.stats.appreciations + "</p>");
+		$("#img1").empty("<p><img src='" +dataFromBehance.project.covers["original"] + "'></p>");
 
 
 
 	},
-	error:function(){
-		console.log("can't connect to Behance api");
-	}
-});
+
+	$("#project-name").append("<p>" +dataFromBehance.project.name + "</p>");
+	$("#fields").append("<p>" +dataFromBehance.project.fields + "</p>");
+	$("#description").append("<p>" +dataFromBehance.project.description + "</p>");
+	$("#view-num").append("<p>" +dataFromBehance.project.stats.views + "</p>");
+	$("#like-num").append("<p>" +dataFromBehance.project.stats.appreciations + "</p>");
+	$("#img1").append("<p><img src='" +dataFromBehance.project.covers["original"] + "'></p>");
+
+
+
+		},
+		error:function(){
+			console.log("can't connect to Behance api");
+		}
+	});
 
 });
 
@@ -138,7 +138,7 @@ $("#img1").append("<p><img src='" +dataFromBehance.project.covers["original"] + 
 
 // Click function to grab data from clicked element
 
-$(document).on('click', '.profile', function(e) {
+$(document).on('click', '.profile-pic', function(e) {
     // console.log($(this)[0].dataset.id);
     var profileID = $(this)[0].dataset.id;
     console.log(profileID);
