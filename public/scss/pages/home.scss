@@ -12,6 +12,7 @@
 			display: flex;
     		justify-content: center;
     		margin-top: 50px;
+            margin-bottom: 50px;
 		}
 		.home-description{
 			margin-top: -230px;
@@ -24,10 +25,11 @@
 		}
 		.home-team_tittle{
 			font-weight: 100;
-    		font-size: 80px;
+    		font-size: 50px;
     		margin: 300px 0 0 0;
     		display: flex;
     		justify-content: center;
+            margin-bottom: 50px;
 		}
 	}
 	.profile{
@@ -122,7 +124,7 @@
      //                    font-size: 18px;
      //                }
      //            }
-     //        }    		
+     //        }
     	// 	.arrows{
     	// 		color: $color05;
     	// 		font-size: 30px;
@@ -164,7 +166,7 @@
             // img{
             //     width: 100%;
             //     max-height: 150px;
-            // }  
+            // }
         }
         .project-txt{
             color: $color02;
@@ -197,5 +199,5 @@
             font-size: 2em;
         }
     }
-    
+
 }

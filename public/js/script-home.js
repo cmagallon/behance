@@ -7,7 +7,6 @@ $.ajax({
 	}
 },
 	success:function(data){
-		console.log("workingTest")
 		key = data.APIkey;
 
 
@@ -70,12 +69,12 @@ $(document).on('click', '.profile-project_single', function(e) {
 	console.log(projectId);
 
 	$.ajax({
-	
+
 	url: "https://api.behance.net/v2/projects/"+ projectId +"?api_key=" + key,
 	dataType: "jsonp",
 	success:function(dataFromBehance){
 		console.log(dataFromBehance);
-		
+
 		var projectName = dataFromBehance.project.name;
 		console.log(projectName);
 		var fields = dataFromBehance.project.fields;
@@ -86,7 +85,7 @@ $(document).on('click', '.profile-project_single', function(e) {
 		console.log(likeNum);
 		var projectImage = dataFromBehance.project.covers['original'];
 		console.log(projectImage);
-		
+
 
 		// Code for popup profile
 
@@ -131,3 +130,150 @@ $("#img1").append("<p><img src='" +dataFromBehance.project.covers["original"] + 
 });
 
 // When the user clicks on <span> (x), close the modal
+
+
+
+// Click function to grab data from clicked element
+$(document).on('click', '.profile', function(e) {
+    // console.log($(this)[0].dataset.id);
+    var profileID = $(this)[0].dataset.id;
+    console.log(profileID);
+
+	$.ajax({
+
+	url: "http://www.behance.net/v2/users/"+ profileID + "?client_id=" + key,
+	dataType: "jsonp",
+	success:function(dataFromBehance){
+		console.log(dataFromBehance);
+
+		$(".user-name").append(dataFromBehance.user.display_name);
+		$(".display-pic").append("<img  src='"+dataFromBehance.user.images[230]+"'>");
+		$(".feilds").append(dataFromBehance.user.fields[2]);
+		$(".views-number").append(dataFromBehance.user.stats.views);
+		$(".likes-number").append(dataFromBehance.user.stats.appreciations);
+		$(".occupation").append(dataFromBehance.user.occupation);
+		$(".location").append(dataFromBehance.user.location);
+		$(".company").append(dataFromBehance.user.company);
+		$(".website").append(dataFromBehance.user.website);
+
+		var array = [
+
+        	{
+
+          Followers: dataFromBehance.user.stats.followers,
+		  Following: dataFromBehance.user.stats.following
+
+
+        }]
+
+
+
+
+        google.charts.load('current', {'packages':['corechart']});
+
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart(){
+
+        	var data = new google.visualization.DataTable();
+        	data.addColumn('string','Year');
+        	data.addColumn('number','Followers');
+        	data.addColumn('number','Following');
+
+
+
+
+        	for (var i = 0; i < array.length; i++) {
+        		data.addRow([
+        			array[i].Year,
+        			array[i].Followers,
+        			array[i].Following
+
+        			])
+        	}
+
+
+        	var options ={
+        		title:'Followers and Following',
+        		bars: 'horizontal',
+						colors: ['#2c3e50','#e74c3c'],
+						textStyle: {
+	 					color: ['#FFFFFF']
+ 						},
+						gridlines: {
+        		color: '#FFFFFF'
+      			},
+        		animation: {
+        			startup: true,
+        			duration: 1000,
+        			easing: 'out'
+        		},
+				titleTextStyle: {
+			    color: '#FFFFFF',
+				size: '24px'
+			},
+				chartArea: {width: '50%'},
+        		width: 500,
+        		height: 400,
+            backgroundColor: "#4771C8"
+
+        	}
+
+        	var chart = new google.visualization.BarChart(document.getElementById('chart'));
+        	chart.draw(data, options);
+
+        }
+
+		// Code for popup profile
+
+// Get the modal
+	var modal = document.getElementById('profileModal');
+	modal.style.display = "block";
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+		$(".user-name").empty();
+		$(".display-pic").empty();
+		$(".feilds").empty();
+		$(".views-number").empty();
+		$(".likes-number").empty();
+		$(".occupation").empty();
+		$(".location").empty();
+		$(".company").empty();
+		$(".website").empty();
+    }
+}
+
+var spanref = $("#closeProject");
+spanref.onclick = function() {
+
+    modal.style.display = "none";
+    // $("#project-name").empty("<p>" +dataFromBehance.project.name + "</p>");
+    // $("#fields").empty("<p>" +dataFromBehance.project.fields + "</p>");
+	// $("#view-num").empty("<p>" +dataFromBehance.project.stats.views + "</p>");
+	// $("#like-num").empty("<p>" +dataFromBehance.project.stats.appreciations + "</p>");
+	// $("#img1").empty("<p><img src='" +dataFromBehance.project.covers["original"] + "'></p>");
+console.log("jo");
+
+
+
+
+
+}
+
+// $("#project-name").append("<p>" +dataFromBehance.project.name + "</p>");
+// $("#fields").append("<p>" +dataFromBehance.project.fields + "</p>");
+// $("#view-num").append("<p>" +dataFromBehance.project.stats.views + "</p>");
+// $("#like-num").append("<p>" +dataFromBehance.project.stats.appreciations + "</p>");
+// $("#img1").append("<p><img src='" +dataFromBehance.project.covers["original"] + "'></p>");
+
+
+	},
+	error:function(){
+		console.log("can't connect to Behance api");
+	}
+});
+
+});

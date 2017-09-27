@@ -186,7 +186,8 @@ html, body {
       opacity: 0.1;
       display: flex;
       justify-content: center;
-      margin-top: 50px; }
+      margin-top: 50px;
+      margin-bottom: 50px; }
     .home .home-text .home-description {
       margin-top: -230px;
       font-weight: 100;
@@ -196,10 +197,11 @@ html, body {
       text-align: center; }
     .home .home-text .home-team_tittle {
       font-weight: 100;
-      font-size: 80px;
+      font-size: 50px;
       margin: 300px 0 0 0;
       display: flex;
-      justify-content: center; }
+      justify-content: center;
+      margin-bottom: 50px; }
   .home .profile {
     height: 300px;
     margin-bottom: 50px;
@@ -313,13 +315,13 @@ html, body {
   justify-content: space-between;
   color: #FFFFFF; }
 
-.profile2-pic {
+#profile2-pic {
   display: flex;
   flex-direction: row;
   width: 400px;
   height: 100%;
   align-items: center; }
-  .profile2-pic img {
+  #profile2-pic img {
     height: 90%;
     margin: 20px;
     border-radius: 50%; }
