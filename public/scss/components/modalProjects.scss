@@ -68,7 +68,8 @@
 
 #project-name{
     font-size: 25px;
-    margin-left: 30px;
+    margin-top: 30px;
+    // margin-left: 3px;
 }
 
 #like-num {
@@ -78,4 +79,12 @@
 #view-num {
         position: relative;
         bottom: 15px;
+}
+
+#description {
+        margin: 40px;
+        margin-left: 90px;
+        font-weight: 100;
+        line-height: 150%;
+
 }
