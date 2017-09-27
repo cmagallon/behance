@@ -107,19 +107,22 @@ span.onclick = function() {
     modal.style.display = "none";
     $("#project-name").empty("<p>" +dataFromBehance.project.name + "</p>");
     $("#fields").empty("<p>" +dataFromBehance.project.fields + "</p>");
+    $("#description").empty("<p>" +dataFromBehance.project.description + "</p>");
 	$("#view-num").empty("<p>" +dataFromBehance.project.stats.views + "</p>");
 	$("#like-num").empty("<p>" +dataFromBehance.project.stats.appreciations + "</p>");
 	$("#img1").empty("<p><img src='" +dataFromBehance.project.covers["original"] + "'></p>");
 
 
 
-}
+},
 
 $("#project-name").append("<p>" +dataFromBehance.project.name + "</p>");
 $("#fields").append("<p>" +dataFromBehance.project.fields + "</p>");
+$("#description").append("<p>" +dataFromBehance.project.description + "</p>");
 $("#view-num").append("<p>" +dataFromBehance.project.stats.views + "</p>");
 $("#like-num").append("<p>" +dataFromBehance.project.stats.appreciations + "</p>");
 $("#img1").append("<p><img src='" +dataFromBehance.project.covers["original"] + "'></p>");
+
 
 
 	},
