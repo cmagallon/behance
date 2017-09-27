@@ -10,7 +10,7 @@ html, body {
 
 /*CSS Modal*/
 /* The Modal (background) */
-.modal {
+.modal, .modal-profile {
   display: none;
   /* Hidden by default */
   position: fixed;

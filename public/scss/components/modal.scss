@@ -1,7 +1,7 @@
 /*CSS Modal*/
 
 /* The Modal (background) */
-.modal {
+.modal, .modal-profile {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -17,7 +17,7 @@
 /* Modal Content/Box */
 .modal-content {
     background-color: $color02;
-    margin: 0 10%; 
+    margin: 0 10%;
     border: 1px solid $color01;
     border-radius: 2px;
     width: 80%; /* Could be more or less, depending on screen size */

@@ -137,6 +137,7 @@ $("#img1").append("<p><img src='" +dataFromBehance.project.covers["original"] + 
 
 
 // Click function to grab data from clicked element
+
 $(document).on('click', '.profile', function(e) {
     // console.log($(this)[0].dataset.id);
     var profileID = $(this)[0].dataset.id;
@@ -230,13 +231,13 @@ $(document).on('click', '.profile', function(e) {
 		// Code for popup profile
 
 // Get the modal
-	var modal = document.getElementById('profileModal');
-	modal.style.display = "block";
+	var modalProfile = document.getElementById('profileModal');
+	modalProfile.style.display = "block";
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+    if (event.target == modalProfile) {
+        modalProfile.style.display = "none";
 		$(".user-name").empty();
 		$(".display-pic").empty();
 		$(".feilds").empty();
@@ -252,7 +253,7 @@ window.onclick = function(event) {
 var spanref = $("#closeProject");
 spanref.onclick = function() {
 
-    modal.style.display = "none";
+    modalProfile.style.display = "none";
     // $("#project-name").empty("<p>" +dataFromBehance.project.name + "</p>");
     // $("#fields").empty("<p>" +dataFromBehance.project.fields + "</p>");
 	// $("#view-num").empty("<p>" +dataFromBehance.project.stats.views + "</p>");
