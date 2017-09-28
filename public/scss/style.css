@@ -197,14 +197,14 @@ html, body {
       margin-top: 50px;
       margin-bottom: 50px; }
     .home .home-text .home-description {
-      margin-top: -230px;
+      margin-top: -295px;
       font-weight: 100;
       font-size: 40px;
       display: flex;
       justify-content: center;
       text-align: center; }
     .home .home-text .home-team_tittle {
-      font-weight: 100;
+      font-weight: 200;
       font-size: 50px;
       margin: 300px 0 0 0;
       display: flex;
@@ -285,7 +285,7 @@ html, body {
     .projects .profile-project_single .project-img {
       width: 100%; }
     .projects .profile-project_single .project-txt {
-      color: #4771C9;
+      color: #000000;
       font-weight: 100;
       text-transform: lowercase;
       font-size: 15px; }
@@ -300,15 +300,28 @@ html, body {
     align-content: center;
     flex-direction: column;
     text-align: center;
-    width: 80%; }
+    width: 65%; }
     #whatwedo .information h2 {
       display: flex;
       align-self: center;
       font-weight: 200;
-      font-size: 50px; }
+      font-size: 50px;
+      margin-bottom: -5px; }
     #whatwedo .information h3 {
-      font-weight: 200;
-      font-size: 2em; }
+      font-weight: 100;
+      font-size: 2em;
+      margin-bottom: -5px; }
+    #whatwedo .information p {
+      font-weight: 100;
+      line-height: 140%; }
+    #whatwedo .information .back-to-top {
+      font-size: 80px;
+      color: #FFFFFF; }
+    #whatwedo .information a {
+      text-decoration: none; }
+    #whatwedo .information h5 {
+      color: #FFFFFF;
+      font-weight: 100; }
 
 .modal-content {
   height: 90%; }

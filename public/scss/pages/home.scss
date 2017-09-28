@@ -15,16 +15,15 @@
             margin-bottom: 50px;
 		}
 		.home-description{
-			margin-top: -230px;
+			margin-top: -295px;
 		    font-weight: 100;
-		    // text-transform: uppercase;
 		    font-size: 40px;
 		    display: flex;
     		justify-content: center;
     		text-align: center;
 		}
 		.home-team_tittle{
-			font-weight: 100;
+			font-weight: 200;
     		font-size: 50px;
     		margin: 300px 0 0 0;
     		display: flex;
@@ -33,7 +32,6 @@
 		}
 	}
 	.profile{
-    	// width: 80%;
 	    height: 300px;
 	    margin-bottom: 50px;
     	margin-top: 30px;
@@ -90,46 +88,6 @@
                 text-align: center;
     		}
     	}
-    	// .profile-project{
-    	// 	background-color: $color01;
-    	// 	border: 0.1px solid $color04;
-    	// 	border-radius: 2px;
-    	// 	width: 1010px;
-    	// 	height: 300px;
-    	// 	display: flex;
-		   //  flex-direction: row;
-		   //  justify-content: space-around;
-		   //  align-items: center;
-     //        .projects{
-     //            display: flex;
-     //            flex-direction: row;
-     //            .profile-project_single{
-     //                background-color: $color01;
-     //                border: 1px solid $color04;
-     //                border-radius: 2px;
-     //                width: 260px;
-     //                height: 260px;
-     //                display: flex;
-     //                flex-direction: column;
-     //                justify-content: flex-start;
-     //                align-items: center;
-     //                margin: 5px;
-     //                .project-img{
-     //                    width: 100%;
-     //                    height: auto;
-     //                }
-     //                .project-txt{
-     //                    color: $color05;
-     //                    font-weight: 100;
-     //                    font-size: 18px;
-     //                }
-     //            }
-     //        }
-    	// 	.arrows{
-    	// 		color: $color05;
-    	// 		font-size: 30px;
-    	// 	}
-    	// }
 	}
 }
 #behanceUsers{
@@ -142,14 +100,12 @@
     width: 900px;
     height: auto;
     background-color: $color01;
-    // border: 0.1px solid $color04;
     border-radius: 2px;
     justify-content: space-around;
     align-items: center;
     .profile-project_single{
         width: 30%;
         height: 90%;
-        // border: 1px solid $color04;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -161,15 +117,9 @@
         }
         .project-img{
             width: 100%;
-            // max-height: 150px;
-            // background-image: ;
-            // img{
-            //     width: 100%;
-            //     max-height: 150px;
-            // }
         }
         .project-txt{
-            color: $color02;
+            color: $color05;
             font-weight: 100;
             text-transform: lowercase;
             font-size: 15px;
@@ -187,16 +137,33 @@
         align-content: center;
         flex-direction: column;
         text-align: center;
-        width: 80%;
+        width: 65%;
         h2{
                 display: flex;
                 align-self: center;
                 font-weight: 200;
                 font-size: 50px;
+                margin-bottom: -5px;
         }
         h3{
-            font-weight: 200;
+            font-weight: 100;
             font-size: 2em;
+            margin-bottom: -5px;
+        }
+        p{
+            font-weight: 100;
+            line-height: 140%;
+        }
+        .back-to-top{
+            font-size: 80px;
+            color: $color01;
+        }
+        a{
+            text-decoration: none;
+        }
+        h5{
+            color: $color01;
+            font-weight: 100;
         }
     }
 

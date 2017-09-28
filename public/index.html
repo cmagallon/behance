@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="scss/style.css">
 </head>
 <body class="main">
-	<header class="header">
+	<header class="header" id="top">
 		<nav class="header-nav">
 			<h1 class="logo">dise&#241;o digital</h1>
 		</nav>
@@ -37,67 +37,59 @@
 		<div id="behanceUsers"></div>
 	</main>
 
-	<!-- The profile modal -->
 
-	<div id="profileModal" class="modal-profile">
+<div id="profileModal" class="modal-profile">
+	<div class="modal-content">
+		<div id="profile-container">
+			<div class="top-bar">
+				<div id="profile2-pic">
+					<div class="display-pic"></div>
+					<div class="profile2-text">
+						<h2 class="user-name"></h2>
+						<h3 class="feilds"></h3>
+					</div>
+				</div>
 
-
-<!-- Code from Chris -->
-		<!-- The modal profile content-->
-<div class="modal-content">
-	<div id="profile-container">
-		<div class="top-bar">
-			<div id="profile2-pic">
-				<!-- <img src="assets/profile-circle.png" alt="user icon"> -->
-				<div class="display-pic"></div>
-				<div class="profile2-text">
-					<h2 class="user-name"></h2>
-					<h3 class="feilds"></h3>
+			<div class="views-likes">
+				<div class="views">
+					<span>
+						<i class="fa fa-eye views-icon" aria-hidden="true"></i>
+					</span>
+					<h4>Views</h4>
+					<h4 class="views-number"></h4>
+				</div>
+				<div class="likes">
+					<span>
+						<i class="fa fa-thumbs-o-up likes-icon" aria-hidden="true"></i>
+					</span>
+					<h4>Likes</h4>
+					<h4 class="likes-number"></h4>
 				</div>
 			</div>
-
-		<div class="views-likes">
-			<div class="views">
-				<span>
-					<i class="fa fa-eye views-icon" aria-hidden="true"></i>
-				</span>
-				<h4>Views</h4>
-				<h4 class="views-number"></h4>
+		</div>
+			<div class="Latest">
 			</div>
-			<div class="likes">
-				<span>
-					<i class="fa fa-thumbs-o-up likes-icon" aria-hidden="true"></i>
-				</span>
-				<h4>Likes</h4>
-				<h4 class="likes-number"></h4>
+			<div class="content">
+				<div class="content-text">
+					<h2>Occupation</h2>
+					<p class="occupation"></p>
+					<h2>Location</h2>
+					<p class="location"></p>
+
+					<h2>Website</h2>
+					<p class="website"></p>
+				</div>
 			</div>
 		</div>
+		<div id="chart"></div>
+
 	</div>
-		<div class="Latest">
-		</div>
-		<div class="content">
-			<div class="content-text">
-				<h2>Occupation</h2>
-				<p class="occupation"></p>
-				<h2>Location</h2>
-				<p class="location"></p>
-
-				<h2>Website</h2>
-				<p class="website"></p>
-			</div>
-		</div>
-	</div>
-	<div id="chart"></div>
-
-</div>
-		<!-- Close modal profile content-->
 
 
 	</div>
 
 
 
-	<!-- The project modal -->
 	<div id="projectModal" class="modal">
 		<div id="myModalProject">
 			<span class="closeProject">&times;</span>
@@ -144,7 +136,6 @@
 
 			</div>
 		</div>
-		<!-- Close modal project content-->
 			</div>
 		</div>
 
@@ -166,6 +157,10 @@
 	        <p class="info-p">In order to deliver awesome things, the most important thing for us is to have a clean services layer that smoothly exposes core functions and data. The lack of stable, well structured API's is often the primary blocker that slows our deliveries down. To speed things up, we have the right team with the right experience to help get the big I.T. picture sorted out. Keeping the enterprise architecture simple is usually the best way to go.</p>
 	        <h2 class="info-title" id="contact">CONTACT US</h2>
 	        <p class="info-p">Send us an email to hello@disenodigital.co.nz</p>
+			<a href="#top">
+				<i class="fa fa-arrow-circle-o-up back-to-top" aria-hidden="true"></i>
+				<h5>Back to top</h5>
+			</a>
 
 		</div>
 
@@ -174,13 +169,7 @@
 
 
 	<script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
-	<!-- <script type="text/javascript" src="js/script.js"></script> -->
 	<script type="text/javascript" src="js/script-home.js"></script>
-	<!-- <script type="text/javascript" src="js/script-project.js"></script> -->
-	<!-- <script type="text/javascript" src="js/script-modal.js"></script> -->
-	<!-- Google Charts -->
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-	<!-- <script type="text/javascript" src="js/script.js"></script> -->
-	<!-- <script type="text/javascript" src="js/profile.js"></script> -->
 </body>
 </html>
