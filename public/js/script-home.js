@@ -43,14 +43,13 @@ function getData(){
 }
 
 function getProjectData(id){
-	// console.log(id);
+
 	$.ajax({
 		url: "https://www.behance.net/v2/users/"+id+"/projects?client_id=" + key +"&per_page=3",
 		dataType: "jsonp",
 		success:function(dataFromBehance){
 			var projectOne = dataFromBehance.projects;
 			for (var a = 0; a < projectOne.length; a++) {
-				// console.log(a);
 				$('[data-id=' + id + '] .projects').append("<div data-id='"+projectOne[a].id+"' class='profile-project_single'>"+
 					"<img class='project-img' src='"+projectOne[a].covers[202]+"' />"+
 					"<div class='project-txt'>"+projectOne[a].name+"</div>"
@@ -64,7 +63,6 @@ function getProjectData(id){
 }
 
 $(document).on('click', '.profile-project_single', function(e) {
-	// console.log($(this)[0].dataset.id);
 		var projectId = $(this)[0].dataset.id;
 		console.log(projectId);
 
@@ -87,7 +85,7 @@ $(document).on('click', '.profile-project_single', function(e) {
 			console.log(projectImage);
 
 
-			// Code for popup profile
+		// Code for popup profile
 
 	// Get the modal
 		var modal = document.getElementById('projectModal');
@@ -136,20 +134,17 @@ $(document).on('click', '.profile-project_single', function(e) {
 
 
 
-// Click function to grab data from clicked element
+// Click function to grab data from profile element
 
 $(document).on('click', '.profile-pic', function(e) {
-    // console.log($(this)[0].dataset.id);
     var profileID = $(this)[0].dataset.id;
     console.log(profileID);
 
-	$.ajax({
+$.ajax({
 
 	url: "http://www.behance.net/v2/users/"+ profileID + "?client_id=" + key,
 	dataType: "jsonp",
 	success:function(dataFromBehance){
-		console.log(dataFromBehance);
-
 		$(".user-name").append(dataFromBehance.user.display_name);
 		$(".display-pic").append("<img  src='"+dataFromBehance.user.images[230]+"'>");
 		$(".feilds").append(dataFromBehance.user.fields[2]);
@@ -230,54 +225,34 @@ $(document).on('click', '.profile-pic', function(e) {
 
 		// Code for popup profile
 
-// Get the modal
-	var modalProfile = document.getElementById('profileModal');
-	modalProfile.style.display = "block";
+		// Get the modal
+			var modalProfile = document.getElementById('profileModal');
+			modalProfile.style.display = "block";
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modalProfile) {
-        modalProfile.style.display = "none";
-		$(".user-name").empty();
-		$(".display-pic").empty();
-		$(".feilds").empty();
-		$(".views-number").empty();
-		$(".likes-number").empty();
-		$(".occupation").empty();
-		$(".location").empty();
-		$(".company").empty();
-		$(".website").empty();
-    }
-}
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		    if (event.target == modalProfile) {
+		        modalProfile.style.display = "none";
+				$(".user-name").empty();
+				$(".display-pic").empty();
+				$(".feilds").empty();
+				$(".views-number").empty();
+				$(".likes-number").empty();
+				$(".occupation").empty();
+				$(".location").empty();
+				$(".company").empty();
+				$(".website").empty();
+		    }
+		}
 
-var spanref = $("#closeProject");
-spanref.onclick = function() {
+		var spanref = $("#closeProject");
+		spanref.onclick = function() {
 
-    modalProfile.style.display = "none";
-    // $("#project-name").empty("<p>" +dataFromBehance.project.name + "</p>");
-    // $("#fields").empty("<p>" +dataFromBehance.project.fields + "</p>");
-	// $("#view-num").empty("<p>" +dataFromBehance.project.stats.views + "</p>");
-	// $("#like-num").empty("<p>" +dataFromBehance.project.stats.appreciations + "</p>");
-	// $("#img1").empty("<p><img src='" +dataFromBehance.project.covers["original"] + "'></p>");
-console.log("jo");
-
-
-
-
-
-}
-
-// $("#project-name").append("<p>" +dataFromBehance.project.name + "</p>");
-// $("#fields").append("<p>" +dataFromBehance.project.fields + "</p>");
-// $("#view-num").append("<p>" +dataFromBehance.project.stats.views + "</p>");
-// $("#like-num").append("<p>" +dataFromBehance.project.stats.appreciations + "</p>");
-// $("#img1").append("<p><img src='" +dataFromBehance.project.covers["original"] + "'></p>");
-
-
-	},
-	error:function(){
-		console.log("can't connect to Behance api");
-	}
-});
-
+		    modalProfile.style.display = "none";
+		}
+			},
+			error:function(){
+				console.log("can't connect to Behance api");
+			}
+	});
 });
