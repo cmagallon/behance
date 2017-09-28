@@ -47,9 +47,7 @@
 		    justify-content: center;
             background-color: $color01;
             flex-direction: column;
-            // border: 0.1px solid $color04;
             border-radius: 2px;
-		    // border-radius: 2px;
             &:hover{
                 box-shadow: 0 15px 25px rgba(0,0,0,0.7);
                 transition: box-shadow 0.3s ease-in-out;
@@ -93,7 +91,6 @@
 #behanceUsers{
     width: 80%;
 }
-
 .projects{
     display: flex;
     flex-direction: row;
@@ -126,8 +123,7 @@
         }
     }
 }
-
-#whatwedo{
+#what-we-do{
     display: flex;
     margin-bottom: 50px;
     flex-direction: column;
